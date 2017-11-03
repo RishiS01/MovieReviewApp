@@ -5,6 +5,7 @@
   "angular-cli": {},
   "scripts": {
     "ng": "ng",
+    "start": "node Server.js",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
