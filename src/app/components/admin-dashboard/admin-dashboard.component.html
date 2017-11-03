@@ -1,0 +1,44 @@
+<div id="moviesCataegories" class="cataegory">
+	<a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+	<div class="add-cat">
+		<h4><b>Movies Category</b></h4>
+		<span class="btn btn-success btn-sm cat" routerLink ="/add-category" >Add Category</span>
+	</div>
+	<a href="" *ngFor='let cat of categories' [routerLink] = "['/genre/'+cat.name]"><li><h5>{{cat.name}}</h5></li></a>
+</div>
+
+<span class="sidebar" (click)="openNav()">&#9776;Movie Categories</span>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-3 pull-right">
+			<div>
+				<a href="#" routerLink ="/add-movie" class="btn btn-success pull-right"> <span class="glyphicon glyphicon-plus"></span> Add Movie</a>
+			</div>
+		</div>
+		<br>
+		<br>
+		<br>
+		<div>
+			<ul>
+				<li *ngFor="let m of movies" class="col-md-4 col-xs-12">
+					<div class="panel panel-warning">
+						<!-- <div class="panel-heading">{{m.movieTitle}}</div> -->
+						<div class="panel-body">
+							<div><a  data-toggle="tooltip" data-placement="top" title="Delete Movie"class="glyphicon glyphicon-remove pull-right delete" (click)= "onDeleteMovie(m)"></a></div>
+							<div class="container image-container">
+								<img  src="{{m.movieImage}}" >
+							</div>
+							<div>
+								<span><h5>{{m.movieTitle}}</h5></span>
+							</div>
+						</div>
+						<div class="panel-footer">
+							<a href="" [routerLink] ="['/edit-movie/'+m.$key]" ><i class="glyphicon glyphicon-pencil"></i> Edit Movie</a> 	
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

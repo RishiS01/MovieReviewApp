@@ -1,0 +1,45 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<div>
+				<h4>Hello:  {{isLoggedInUser}}</h4>
+			</div>
+			<div class="panel panel-primary">
+				<div class="panel-body">
+					<form #f = 'ngForm' (submit) = "createUserProfile(f)">
+						<div class="form-group">
+							<label for="firstName" >First Name:</label>
+							<input type="text"  name="firstName" class="form-control" required placeholder="FirstName" [(ngModel)]='profile.firstName'  minlength="3" #firstName='ngModel'>
+						</div>
+						<div *ngIf='firstName?.errors?.required && firstName?.touched' class="alert-danger">
+							First name Required
+						</div>
+						<div *ngIf='firstName?.errors?.minlength && firstName?.touched' class="alert-danger">
+							Must be minimum 3 characters
+						</div>
+						<div class="form-group">
+							<label for="lastName" >Last Name:</label>
+							<input type="text"  name="lastName" class="form-control" required placeholder="LastName" [(ngModel)]='profile.lastName'  minlength="3" #lastName='ngModel'>
+						</div>
+						<div *ngIf='lastName?.errors?.required && lastName?.touched' class="alert-danger">
+							Last name Required
+						</div>
+						<div *ngIf='lastName?.errors?.minlength && lastName?.touched' class="alert-danger">
+							Must be minimum 3 characters
+						</div>
+						<div class="form-group">
+							<label for="phone" >Contact No:</label>
+							<input type="text"  name="phone" class="form-control" required placeholder="Contact Number" [(ngModel)]='profile.phone'  minlength="10" #phone='ngModel'>
+						</div>
+						<div *ngIf='phone?.errors?.minlength && phone?.touched' class="alert-danger">
+							Please enter a valid Phone no.
+							
+						</div>
+						<button class="btn btn-success btn-block" type="submit" [disabled]=f.invalid>Update </button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

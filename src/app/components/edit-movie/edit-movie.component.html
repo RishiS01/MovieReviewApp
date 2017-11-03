@@ -1,0 +1,79 @@
+<div >
+	<a href="#" routerLink = '/admin-dashboard' class="btn btn-link"><span class="glyphicon glyphicon-arrow-left"></span> Back to Main Page</a>
+</div>
+<div class="container">
+	
+	<div class="panel panel-primary">
+		<div class="panel-heading">Edit Movie: {{movie.movieTitle}}</div>
+		<div class="panel-body">
+			<form #f = "ngForm" (ngSubmit) = "onUpdateMovie(f)">
+				<div class="row">
+					<div class="col-md-4">
+						<div [dropzone]="config" (error)="onUploadError($event)" (success)="onUploadSuccess($event)" *ngIf='!movie.movieImage'>
+							<div class="dz-message" data-dz-message>
+								<div class="dropzone-div"><span class="dropzone-text">Add Movie Poster</span></div>
+							</div>
+						</div>
+						<div action="/file-upload" class="dropzone" id="my-awesome-dropzone"></div>
+						<div class="container image-container " *ngIf = "movie.movieImage">
+							<a class="glyphicon glyphicon-remove remove" (click) = "deleteMovieImageOnEdit()"></a>
+							<img src="{{movie.movieImage}}" >
+						</div>
+					</div>
+					<br>
+					<div class="col-md-8">
+						<div class="form-group">
+							<label for="title">Movie Title:</label>
+							<input type="text" name="movieTitle" class="form-control"  [(ngModel)]='movie.movieTitle' required="movieTitle" #movieTitle='ngModel' placeholder="Movie Title">
+						</div>
+						<div *ngIf = "movieTitle?.errors?.required && movieTitle?.touched" class="alert alert-danger">
+							Name Required
+						</div>
+						
+						<div class="form-group">
+							<label for="summery">Summary:</label>
+							<textarea class="form-control" rows="2" name="movieDescription" [(ngModel)]='movie.movieDescription' required="movieDescription" #movieDescription='ngModel' placeholder="description.."></textarea>
+						</div>
+						<div *ngIf = "movieDescription?.errors?.required && movieDescription?.touched" class="alert alert-danger">
+							Required
+						</div>
+						<div class="form-group">
+							<label for="genres">Genres list (select one):</label>
+      						<select class="form-control" id="genres" [(ngModel)]='movie.movieGenre' required="movieGenre" name="movieGenre" #movieGenre='ngModel'>
+        						<option *ngFor='let cat of categories' [value]='cat.name' (input)= "cat.name= $event.target.value">{{cat.name}}</option>
+        						
+     						</select>
+  						</div>
+  						<div *ngIf='movieGenre?.errors?.required && movieGenre?.touched' class="alert alert-danger">
+  							Required
+  						</div>
+						<div class="form-group cast" *ngFor='let c of movie.cast ;let i = index '>
+							<label for="cast">Cast:</label>
+							<div class="castName">
+								<input type="text" name="name" [value]='c.name' (input)= "c.name= $event.target.value" required="name"  placeholder="Cast Name" >
+							</div>
+							<div *ngIf = "name?.errors?.required && name?.touched" class="alert alert-danger">
+								Cast Name Required
+							</div>
+							<div [dropzone]="config" (error)="onUploadError($event)" (success)="onUploadCastImage($event,i)" name = "image" *ngIf = "!c.image">
+								<div class="dz-message " data-dz-message>
+									<div class="dropzone-div castDiv"><span class="dropzone-text castSpan">Add cast Pic</span></div>
+								</div>
+							</div>
+							<div action="/file-upload" class="dropzone" id="my-awesome-dropzone"></div>
+							<div class="container castImage-container " *ngIf = "c.image">
+								<a class="glyphicon glyphicon-remove removeCastImage" (click) = "deleteCastImageOnEdit(image,i)"></a>
+								<img src="{{c.image}}" >
+							</div>
+							<a  class="btn btn-danger btn-sm pull-right deleteCast"  (click)="removeCastOnEdit(cast,i)" >Delete Cast</a>
+						</div>
+						<div class="addCastDiv">
+							<a class="btn btn-warning btn-sm addCast" (click)='onAddCastOnEdit()'>Add Cast</a>
+						</div>
+					</div>
+				</div>
+				<button  type="submit" class="btn btn-primary pull-right" [disabled]='f.invalid'>Update</button>
+			</form>
+		</div>
+	</div>
+</div>

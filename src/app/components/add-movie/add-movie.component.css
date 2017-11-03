@@ -1,0 +1,79 @@
+.image-container{
+    height: 250px;
+    width: 250px;
+    display: grid;
+    margin:0px 100px 0px 40px;
+    position: relative;
+}
+.remove{
+    color: red;
+    position: absolute;
+    right: 0;
+    text-decoration: none;
+    padding-top: 25px;
+   
+}
+.dropzone-div{
+	background-color: #f2f2f2;
+	height: 100px;
+    width: 200px;
+    position: relative;
+    border: 1px dotted black;
+    margin-top: 30px;
+}
+.dropzone-text{
+	
+	margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+.castDiv{
+    background-color: #f2f2f2;
+    height: 100px;
+    width: 150px;
+    position: relative;
+    border: 1px dotted black;
+    margin-top: inherit;
+}
+.castSpan{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+.cast{
+    margin-top: 20px;
+}
+.addCast{
+   /* position: relative;*/
+    left: 155px;
+    bottom:100px;
+}
+.castName{
+    margin-bottom: 5px;
+}
+.removeCastImage{
+    color: red;
+    position: absolute;
+    right: 0;
+    text-decoration: none;
+    padding-top: 25px;
+}
+.castImage-container{
+    height: 250px;
+    width: 250px;
+    display: grid;
+    margin:0px 100px 0px -25px;
+    position: relative;
+}
+img{
+    max-width: 80%
+}
+.req{
+    color: red;
+}

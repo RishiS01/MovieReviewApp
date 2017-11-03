@@ -1,0 +1,29 @@
+<div >
+	<a href="#" routerLink = '' class="btn btn-link"><span class="glyphicon glyphicon-arrow-left"></span> Back to Main Page</a>
+</div>
+<div class="container movie-detail">
+	<div class="row">
+		<div class="poster panel-warning">
+			<img src="{{movie.movieImage}}" alt="Poster" class="title panel-body" >
+		</div>
+		<div >
+			<div><h2>{{movie.movieTitle}}</h2></div>
+			<div>
+				{{movie.movieDescription}}
+			</div>
+		</div>
+	</div>
+	<div class="row ">
+		<div><h3>Cast</h3></div>
+		<div *ngFor='let c of cast' class="col-md-3 panel-body">
+			<div class="panel panel-warning">
+				<div><h3>{{c.name}}</h3></div>
+			<div class="cast">
+				<img src="{{c.image}}" alt="Cast1" width="180" height="200" class="cast1 ">
+			</div>
+			</div>
+
+		</div>
+		
+	</div>
+</div>

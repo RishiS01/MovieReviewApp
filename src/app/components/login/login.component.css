@@ -1,0 +1,15 @@
+.adminLogin{
+	float: right;
+    margin: 0 0 10px 10px;
+    font-weight: bold;
+
+}
+.google {
+    background-color: #dd4b39 !important;
+  }
+.facebook {
+    background-color: #006699 !important;
+  }
+.password{
+	align-self: center;
+}

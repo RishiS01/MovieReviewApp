@@ -1,0 +1,29 @@
+<div >
+	<a href="#" routerLink = '' class="btn btn-link"><span class="glyphicon glyphicon-arrow-left"></span> Back to Main Page</a>
+</div>
+<div>
+	<h3>{{name}}</h3>
+	<div class="row" *ngIf='movie?.length>0;else noMovie'>
+		<ul>
+			<li *ngFor="let mov of movie; let i = index; " class="col-md-4">
+				<div class="panel panel-default">
+					<!-- <div class="panel-heading">{{m.movieTitle}}</div> -->
+					<div class="panel-body">
+						<div class="container image-container">
+							<img src="{{mov.movieImage}}" >
+						</div>
+						<div>
+							<span><h5>{{mov.movieTitle}}</h5></span>
+						</div>
+					</div>
+					<div class="panel-footer">
+						<a href="" [routerLink] ="['/movie-detail/'+mov.$key]" >View Details...</a>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+<ng-template #noMovie>
+	<h4>No Movies in this Catageory</h4>
+</ng-template>

@@ -1,0 +1,32 @@
+<div >
+	<a href="#" routerLink = '' class="btn btn-link"><span class="glyphicon glyphicon-arrow-left"></span> Back to Main Page</a>
+</div>
+<div class="container">
+	<div class="row" *ngIf='movie?.length >0; else noMovie'>
+		<div>
+			<ul>
+				<li *ngFor='let mov of movie' class="col-md-4 col-xs-12">
+					<div class="panel panel-primary">
+						
+						<div class="panel-body">
+							<div><a  data-toggle="tooltip" data-placement="top" title="Remove as Favourite" class="glyphicon glyphicon-remove pull-right delete" (click)= "onRemoveFavourate(mov)"></a></div>
+							<div class="container image-container">
+								<img  src="{{mov.movieImage}}" >
+							</div>
+							<div>
+								<span><h5>{{mov.movieTitle}}</h5></span>
+							</div>
+						</div>
+						<div class="panel-footer">
+							<!-- <a href="" [routerLink] ="['/edit-movie/'+m.$key]" ><i class="glyphicon glyphicon-pencil"></i> Edit Movie</a> 	 -->
+							<a href="" [routerLink] ="['/movie-detail/'+mov.$key]" >View Details...</a>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<ng-template #noMovie>
+	<h4>No favourites to show</h4>
+</ng-template>

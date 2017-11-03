@@ -1,0 +1,25 @@
+li{
+	list-style: none;
+}
+img{
+	max-width: 100%;
+	/*height: 200px;*/
+	margin: 0 auto;
+}
+.image-container{
+	height: 300px;
+	width: 300px;
+	display: grid;
+	margin: 0 auto;
+}
+h5{
+	text-align: center;
+}
+.delete{
+	color: red;
+	
+}
+h4{
+	text-align: center;
+	color:red;
+}
