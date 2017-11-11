@@ -36,7 +36,7 @@ export class FavourateComponent implements OnInit {
           });
             console.log(i)
               this.movie= i  ;
-            console.log('hello');
+            // console.log('hello');
         }else{
             this.movie = {};
         }

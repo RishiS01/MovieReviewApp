@@ -71,15 +71,15 @@ export class UserDashboardComponent implements OnInit {
   	})
 
   }
-  onAddUserFavourite(i){debugger
+  onAddUserFavourite(i){
     // this.favourite(movie){
     //   favourite.movie = this.movie[i]
     // };
-    this.authServiceService.getAuth().subscribe(auth=>{debugger
+    this.authServiceService.getAuth().subscribe(auth=>{
       console.log(auth)
         
-       if(auth ===  null){
-         this.flashMessagesService.show('You Need to Login first for this',{cssClass:'alert-success',timeout:3000});
+      if(auth ===  null){
+        this.flashMessagesService.show('You Need to Login first for this',{cssClass:'alert-success',timeout:3000});
         this.router.navigate(['/login']);
       }else{
       // const selectedMovie=this.movies[i];

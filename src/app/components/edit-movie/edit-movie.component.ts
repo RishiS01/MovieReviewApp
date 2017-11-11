@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MovieServiceService } from '../../services/movie-service.service';
 import { Router,ActivatedRoute,Params } from '@angular/router'; 
 import { NgForm } from '@angular/forms';
-
+import { YoutubePipe } from '../../youtube.pipe';
 @Component({
   selector: 'app-edit-movie',
   templateUrl: './edit-movie.component.html',
@@ -25,7 +25,9 @@ export class EditMovieComponent implements OnInit {
     image:''
   }]
   $key:string
-  categories:any[]
+  categories:any[];
+  loader:boolean = false;
+  trailer:any;
   constructor(
   	public movieServiceService:MovieServiceService,
   	public router:Router,
@@ -58,8 +60,8 @@ export class EditMovieComponent implements OnInit {
       this.categories= i;
     })
   } 
-  onUpdateMovie(){
-  
+  onUpdateMovie(f:NgForm){debugger
+    this.movie.trailer=f.value.trailer
     this.movieServiceService.updateMovie(this.$key,this.movie);
     this.router.navigate(['/admin-dashboard']);
   }
@@ -97,12 +99,19 @@ export class EditMovieComponent implements OnInit {
   onUploadCastImage($event,i){
     console.log($event)
     this.movie.cast[i].image = $event[0].dataURL;
+    this.loader=false;
     console.log(this.movie.cast[i].image);
   }   
   onUploadSuccess($event){
+    // this.loader=true;
     console.log($event)
     this.movie.movieImage = $event[0].dataURL;
+    this.loader=false;
     console.log(this.movie.movieImage);
+  }
+  onUploadProgress($event){
+    this.loader=true;
+
   }
  
 }

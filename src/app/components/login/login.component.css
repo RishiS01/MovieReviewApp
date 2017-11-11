@@ -13,3 +13,10 @@
 .password{
 	align-self: center;
 }
+h4{
+	text-align: center;
+	margin:5px;
+}
+.email{
+	margin-bottom: 6px;
+}

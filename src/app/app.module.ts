@@ -27,16 +27,23 @@ import { GenresComponent } from './components/genres/genres.component';
 
 import { AuthServiceService } from './services/auth-service.service';
 import { MovieServiceService } from './services/movie-service.service';
+import { AuthGuard } from './guards/auth.guard';
 
 
 import { DropzoneModule } from 'ngx-dropzone-wrapper';
 import { DropzoneConfigInterface } from 'ngx-dropzone-wrapper';
 
 import { AngularFireModule } from 'angularfire2';
-// import { AngularFireModule } from 'angularfire2/database-deprecated';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+
+
+
+import { YoutubePipe } from './youtube.pipe';
+
+
+
 
 
 
@@ -50,9 +57,9 @@ const appRoutes:Routes = [
   { path:'change-password',component:ChangePasswordComponent},
   { path:'favourate',component:FavourateComponent},
   { path:'admin-login',component:AdminLoginComponent},
-  { path:'edit-movie/:id',component:EditMovieComponent},
+  { path:'edit-movie/:id',component:EditMovieComponent,canActivate:[AuthGuard]},
   { path:'login',component:LoginComponent},
-  { path:'admin-dashboard',component:AdminDashboardComponent},
+  { path:'admin-dashboard',component:AdminDashboardComponent,canActivate:[AuthGuard]},
   { path:'add-category',component:CategoriesComponent},
   { path:'genre/:name',component:GenresComponent}
 
@@ -104,7 +111,8 @@ export const firebaseConfig = {
     UserLoginComponent,
     UserProfileComponent,
     CategoriesComponent,
-    GenresComponent
+    GenresComponent,
+    YoutubePipe
   ],
   imports: [
     BrowserModule,
@@ -119,7 +127,8 @@ export const firebaseConfig = {
     AuthServiceService,
     AngularFireAuth,
     AngularFireDatabase,
-    MovieServiceService
+    MovieServiceService,
+    AuthGuard
 
   ],
   bootstrap: [AppComponent]

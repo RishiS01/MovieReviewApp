@@ -6,5 +6,9 @@ export interface Movie{
 	movieCastName?:string;
 	movieImage?:string;
 	movieCastImage?:string;
+	id?:string;
+	email?:string;
+	comments?:any[];
+	cast?:{}[];
 
 }

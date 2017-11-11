@@ -6,6 +6,7 @@ import { NgForm } from '@angular/forms';
 import { MovieServiceService } from '../../services/movie-service.service';
 import { AngularFireAuth,AUTH_PROVIDERS} from 'angularfire2/auth';
 import * as firebase from 'firebase';
+import { Profile } from '../../Models/Profile';
 
 @Component({
   selector: 'app-login',
@@ -16,20 +17,24 @@ export class LoginComponent implements OnInit {
 	id:string;
 	email:string;
 	password:string;
-	profile={
-		displayName:'',
-		email:''
-	}
+	// profile={
+	// 	displayName:'',
+	// 	email:''
+	// }
 isloggedInUser:string;
 isLoggedInUserEmail:string;
 isLoggedIn:boolean;
+guest:boolean=false;
+profile ={} as Profile;
   constructor(
   	private authServiceService:AuthServiceService,
   	private router:Router,
   	private flashMessagesService:FlashMessagesService,
   	private movieServiceService:MovieServiceService,
     private angularFireAuth:AngularFireAuth
-  	) { }
+  	) { 
+
+  }
 
   ngOnInit() {
   }
@@ -37,13 +42,16 @@ isLoggedIn:boolean;
   signInWithEmail(){
   	this.authServiceService.userLogin(this.email,this.password)
   	.then((res) =>{
-  	  this.flashMessagesService.show('You are Logged in',{cssClass:'alert-success',timeout:2000});
+  	  this.flashMessagesService.show('Welcome to Movie Review',{cssClass:'alert-success',timeout:2000});
   		this.router.navigate(['']);
+      
   	})
   	.catch((err) =>{
   		this.flashMessagesService.show(err.message,{cssClass:'alert-danger', timeout:2000});
   		this.router.navigate(['/login']);
   	})
+    this.guest=true;
+    console.log(this.guest)
   }
   
   signInWithFacebook() {
@@ -67,13 +75,20 @@ isLoggedIn:boolean;
   onRegisterSubmit(){
     this.authServiceService.newUser(this.email,this.password)
     .then((res)=>{
-      this.flashMessagesService.show('Registered Successfully Login again to continue',{cssClass:'alert-success',timeout:1500});
+      const profile={} as Profile;
+      profile.role='guest';
+      this.authServiceService.getAuth().subscribe(auth=>{
+     this.movieServiceService.newUserProfile(profile,auth.uid)
+   });
+      this.flashMessagesService.show('Registered Successfully',{cssClass:'alert-success',timeout:1500});
+      
       this.router.navigate(['']);
     })
     .catch((err)=>{
       this.flashMessagesService.show(err.message,{cssClass:'alert-danger',timeout:1500});
       this.router.navigate(['/login']);
     })
+
   }
 
   

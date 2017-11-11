@@ -1,29 +1,66 @@
 <div >
 	<a href="#" routerLink = '' class="btn btn-link"><span class="glyphicon glyphicon-arrow-left"></span> Back to Main Page</a>
 </div>
-<div class="container movie-detail">
-	<div class="row">
-		<div class="poster panel-warning">
-			<img src="{{movie.movieImage}}" alt="Poster" class="title panel-body" >
-		</div>
-		<div >
-			<div><h2>{{movie.movieTitle}}</h2></div>
-			<div>
-				{{movie.movieDescription}}
+<div class="well well-lg movie-detail">
+	
+		<div class="row">
+			<div class="poster col-md-6">
+				<img src="{{movie.movieImage}}" alt="Poster" class="title panel-body img-responsive" >
+			</div>
+			<div class="col-md-6">
+				<div><h2>{{movie.movieTitle}}</h2></div>
+				<div>
+					{{movie.movieDescription}}
+				</div>
 			</div>
 		</div>
-	</div>
+	
 	<div class="row ">
-		<div><h3>Cast</h3></div>
+		<div><h2>Cast</h2></div>
 		<div *ngFor='let c of cast' class="col-md-3 panel-body">
 			<div class="panel panel-warning">
 				<div><h3>{{c.name}}</h3></div>
-			<div class="cast">
-				<img src="{{c.image}}" alt="Cast1" width="180" height="200" class="cast1 ">
+			<div class="cast-image">
+				<img src="{{c.image}}" alt="Cast1" >
 			</div>
 			</div>
-
 		</div>
-		
 	</div>
 </div>
+<div class="well well-sm">
+	<small>
+    	<h4><a (click) = "showCommentInput = !showCommentInput"><i class="fa fa-comment" aria-hidden="true"></i> Comments:</a></h4>
+    </small>
+    <div>
+    	<form  #f='ngForm'(ngSubmit)=onSubmitUserComments(f)>
+    		<div class="form-group">
+    			<input type="text" name="userComment" class="form-control" [(ngModel)]='userComment'>
+    		</div>
+    		<button class="btn btn-success btn-sm">Comment</button>
+    	</form>
+    </div>
+    <div >
+    	<ul>
+    		<li *ngFor='let com of c ; let i= index '> 
+    			<h5>
+    				<p> <span class="userEmail"><i class="fa fa-user" aria-hidden="true"></i>  {{com.email}} : </span><span class="comment">{{com.comment}}</span> 
+    					<span *ngIf='Authuser'><span *ngIf='Authuser.uid === c[i].id ' class="glyphicon glyphicon-remove pull-right remove" (click)='onDeleteComment(com,i)'></span></span>
+    				</p>
+    					
+    			</h5>
+    		</li>
+    	</ul>
+    </div>
+</div>
+<div class="row">
+	<div class="col-md-8 col-md-offset-2 well well-lg">
+		<h3></h3>
+		<div class="video col-lg-offset-1 panel-body"  *ngIf='movie.trailer;else noTrailer'>
+			<iframe width="560" height="315" [src]="movie.trailer | youtube" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>
+</div>
+
+<ng-template #noTrailer>
+	<h4 class="noTrailer">No Trailer available now</h4>
+</ng-template>

@@ -27,6 +27,7 @@ export class UserProfileComponent implements OnInit {
 isloggedInUser:string;
 isLoggedInUser:string;
 isLoggedIn:boolean;
+disableRole:boolean=false;
   constructor(
   	public authServiceService:AuthServiceService,
   	public movieServiceService:MovieServiceService,
@@ -56,14 +57,17 @@ this.movieServiceService.getUserProfile(auth.uid).valueChanges().subscribe(data=
 });
      });
  }
- createUserProfile(f:NgForm){
+ createUserProfile(f:NgForm){debugger
+   let guest
    const profile={} as Profile;
    profile.firstName=f.value.firstName;
    profile.lastName=f.value.lastName;
    profile.phone=f.value.phone;
+   profile.role='guest';
+   
    console.log(f.value);
    this.authServiceService.getAuth().subscribe(auth=>{
-     this.movieServiceService.newUserProfile(this.profile,auth.uid)
+     this.movieServiceService.newUserProfile(profile,auth.uid)
    });
    
  }

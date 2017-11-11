@@ -3,5 +3,6 @@ export interface Profile{
 	lastName?:string;
 	phone?:string;
 	$key?:string;
+	role?:string;
 
 }

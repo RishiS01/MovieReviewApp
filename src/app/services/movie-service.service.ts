@@ -13,6 +13,8 @@ export class MovieServiceService {
 	profile:AngularFireObject<any[]>;
 	favourites:AngularFireList<any[]>;
 	favourite:AngularFireObject<any[]>;
+	comments:AngularFireList<any[]>;
+	role:AngularFireObject<any[]>;
 
 
 
@@ -24,16 +26,17 @@ export class MovieServiceService {
   		this.categories=this.angularFire.list('/categories');
   		this.user = this.angularFire.list('/user');
   		this.favourites=this.angularFire.list('/favourite');
+  		// this.role=this.angularFire.list('/role');
 
 
 	 }
-
-	newMovie(movie){debugger
+	 
+	newMovie(movie){
 		this.movies.push(movie);
 	}
 	getMovies(){
 	return this.angularFire.object('/movies').snapshotChanges().map(action => {
-   		 const $key = action.payload.key;
+   		const $key = action.payload.key;
     	const data = { $key, ...action.payload.val() };
     	return data;
   		});
@@ -48,7 +51,7 @@ export class MovieServiceService {
 		
 		return this.movies.update($key,movie)
 	}
-	addCategory(category){debugger
+	addCategory(category){
 		this.categories.push(category);
 
 	}
@@ -80,7 +83,7 @@ export class MovieServiceService {
   		 console.log(uid);
   		 this.router.navigate(['']);
 	}
-	getUserProfile($key){debugger
+	getUserProfile($key){
 		// return this.angularFire.object('/profile').snapshotChanges().map(action => {
   //  		 const $key = action.payload.key;
   //   	const data = { $key, ...action.payload.val() };
@@ -99,11 +102,30 @@ export class MovieServiceService {
 		console.log($key)
 		return this.angularFire.object(`/user/${$key}/favourites`);
 	}
-	removeMovieAsfavourate(id,mov){debugger
+	removeMovieAsfavourate(id,mov){
 		const list=this.angularFire.object(`/user/${id}/favourites/${mov.$key}`).remove();
 		console.log(mov.$key)
-		
 	}
+	userComment(id,$key,comment){
+		
+		console.log($key)
+		const com=this.angularFire.list(`/movies/${$key}/comments`);
+		com.push({...comment})
 
-
+	}
+	deleteUserComment($key,i){
+		console.log(i)
+		console.log($key)
+		return this.angularFire.list(`/movies/${$key}/comments/${i}`).remove();
+		// this.route.navigate(['/movie-detail'+ $key])
+	}
+	
+	// getUsers(){
+	// 	return this.angularFire.object(`/user`)
+	// 	.snapshotChanges().map(action => {debugger
+ //   		 const $key = action.payload.key;
+ //    	const data = { $key, ...action.payload.val() };
+ //    	return data;
+ //  		});
+	// }
 }

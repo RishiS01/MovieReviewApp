@@ -1,4 +1,4 @@
-.category{
+/*.category{
 	background-color: #C0C0C0;
 
 }
@@ -7,17 +7,17 @@
     width: 260px;
     height: 700px;
     margin: 0;
-    /*padding: 1em;*/
+   
 }
 h5{
-	/*margin: 10px;*/
+	
 	text-align: center;
 }
 .cat{
 	text-align: center;
 }
 h5{
-    /*background:#D3D3D3;*/
+    
     padding: 5px;
 }
 h5:hover {
@@ -28,3 +28,4 @@ h5:hover {
 a{
 	text-decoration: none;
 }
+*/

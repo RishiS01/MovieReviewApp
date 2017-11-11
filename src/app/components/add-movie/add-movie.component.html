@@ -6,7 +6,7 @@
 			<form #f = "ngForm" (ngSubmit) = "onAddMovie(f)">
 				<div class="row">
 					<div class="col-md-4">
-						<div [dropzone]="config" (error)="onUploadError($event)" (success)="onUploadSuccess($event)" *ngIf='!movie.movieImage'>
+						<div [dropzone]="config" (error)="onUploadError($event)" (processing)='onUploadProgress($event)' (success)="onUploadSuccess($event)" *ngIf='!movie.movieImage'>
 							<div class="dz-message" data-dz-message>
 								<div class="dropzone-div"><span class="dropzone-text">Add Movie Poster</span></div>
 							</div>
@@ -16,6 +16,7 @@
 							<a class="glyphicon glyphicon-remove remove" (click) = "deleteMovieImage()"></a>
 							<img src="{{movie.movieImage}}" >
 						</div>
+						<div class="loader" *ngIf= "loader"></div>
 					</div>
 					<br>
 					<div class="col-md-8">
@@ -40,9 +41,9 @@
         						<option *ngFor='let cat of categories'>{{cat.name}}</option>
      						</select>
   						</div>
-  						<div *ngIf='movieGenre?.errors?.required && movieGenre?.touched' class="alert alert-danger">
+  						<!-- <div *ngIf='movieGenre?.errors?.required && movieGenre?.touched' class="alert alert-danger">
   							Required
-  						</div>
+  						</div> -->
 
 						<div class="form-group cast" *ngFor='let c of cast ;let i = index '>
 							<label for="cast">Cast:</label>
@@ -52,7 +53,7 @@
 							<div *ngIf = "name?.errors?.required && name?.touched" class="alert alert-danger">
 								Cast Name Required
 							</div>
-							<div [dropzone]="config" (error)="onUploadError($event)" (success)="onUploadCastImage($event,i)" name = "image" *ngIf = "!c.image">
+							<div [dropzone]="config" (error)="onUploadError($event)" (processing)='onUploadProgress($event)' (success)="onUploadCastImage($event,i)" name = "image" *ngIf = "!c.image">
 								<div class="dz-message " data-dz-message>
 									<div class="dropzone-div castDiv"><span class="dropzone-text castSpan">Add cast Pic</span></div>
 								</div>
@@ -62,11 +63,21 @@
 								<a class="glyphicon glyphicon-remove removeCastImage" (click) = "deleteCastImage(image,i)"></a>
 								<img src="{{c.image}}" >
 							</div>
+							<!-- <div class="loader" *ngIf= "loader && !c.image"></div> -->
 							<a  class="btn btn-danger btn-sm "  (click)="removeCast(cast,i)" >Delete</a>
 						</div>
 						<div class="addCastDiv">
 							<a class="btn btn-warning btn-sm addCast" (click)='onAddCast()'>Add Cast</a>
-							
+						</div>
+						
+						<div class="form-group movieTrailer">
+							<label for="movieTrailer">Movie Trailer:<h6>*paste youtube embeded code here</h6></label>
+
+							<input type="text" name="trailer" class="form-control" [(ngModel)]='trailer' required="trailer" placeholder="Movie Trailer">
+							<!-- <span  class="btn btn-warning btn-sm col-md-2" (click)='onAddVideoSource(trailer)'>Add Source</span> -->
+							<div class="col-md-12 movieTrailer">
+							<iframe width="560" height="315" [src]="trailer | youtube" frameborder="0" allowfullscreen *ngIf='trailer'></iframe>
+							</div>
 						</div>
 						
 					</div>

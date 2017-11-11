@@ -3,6 +3,9 @@ import { MovieServiceService } from '../../services/movie-service.service';
 import { Router,ActivatedRoute,Params} from '@angular/router';
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { NgForm } from '@angular/forms';
+import { DomSanitizer } from '@angular/platform-browser';
+import _ from 'lodash';
+import { YoutubePipe } from '../../youtube.pipe';
 // import { Movie } from '../../Models/Movie';
 
 @Component({
@@ -13,25 +16,31 @@ import { NgForm } from '@angular/forms';
 export class AddMovieComponent implements OnInit {
 	movies:any[];
 	$key:string;
+  trailer:any;
+  video:any;
 	movie = {
 		
 		movieTitle:'',
 		movieDescription:'',
 		movieImage:'',
     movieGenre:'',
-		cast:[]
+		cast:[],
+    trailer:[]
 	};
 	cast=[{
 		id: new Date().valueOf(),
 		name:'',
 		image:''
 	}]
-
 categories:any[];
+loader:boolean = false;
+
+
   constructor(
   	public movieServiceService:MovieServiceService,
   	public router:Router,
-  	public flashMessagesService:FlashMessagesService
+  	public flashMessagesService:FlashMessagesService,
+    private satitizer:DomSanitizer
   	) { }
 
   ngOnInit() {
@@ -57,15 +66,39 @@ categories:any[];
   	this.movie.movieDescription=f.value.movieDescription;
     this.movie.movieGenre=f.value.movieGenre;
   	this.movie.cast = this.cast;
+    this.movie.trailer=f.value.trailer;
   	console.log(f.value);
   	this.movieServiceService.newMovie(this.movie);
   	this.flashMessagesService.show('Movie added',{cssClass:'alert-success',timeout:1500});
   	this.router.navigate(['/admin-dashboard']);
-
-
-    
-
   }
+//   YouTubeGetID(url){debugger
+//   let ID = '';
+//   url = url.replace(/(>|<)/gi,'').split(/(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/)/);
+//   if(url[2] !== undefined) {
+//     ID = url[2].split(/[^0-9a-z_\-]/i);
+//     ID = ID[0];
+//   }
+//   else {
+//     ID = url;
+//   }
+//      return ID;
+//    // this.getEmbededUrl(ID)
+// }
+//   onAddVideoSource(abc){debugger
+   
+//    this.video=abc
+//    this.YouTubeGetID(abc)
+
+//   }
+  // getEmbededUrl(a){
+  //   if(!_.isEmpty(a)){
+  //     console.log(a);
+  //     return this.satitizer.bypassSecurityTrustResourceUrl( a);  
+  //   }else{
+  //     return false;
+  //   }
+  // }
   onAddCast(){
   	this.cast.push({
   	 id: new Date().valueOf(),
@@ -99,12 +132,18 @@ categories:any[];
   onUploadSuccess($event){
     console.log($event)
     this.movie.movieImage = $event[0].dataURL;
+    this.loader=false;
     console.log(this.movie.movieImage);
   }
   onUploadCastImage($event,i){
   	console.log($event)
   	this.cast[i].image = $event[0].dataURL;
+    this.loader=false;
     console.log(this.cast[i].image);
+  }
+  onUploadProgress($event){debugger
+    this.loader=true;
+
   }
   
 }
