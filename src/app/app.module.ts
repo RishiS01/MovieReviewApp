@@ -60,7 +60,7 @@ const appRoutes:Routes = [
   { path:'edit-movie/:id',component:EditMovieComponent,canActivate:[AuthGuard]},
   { path:'login',component:LoginComponent},
   { path:'admin-dashboard',component:AdminDashboardComponent,canActivate:[AuthGuard]},
-  { path:'add-category',component:CategoriesComponent},
+  { path:'add-category',component:CategoriesComponent,canActivate:[AuthGuard]},
   { path:'genre/:name',component:GenresComponent}
 
 ]

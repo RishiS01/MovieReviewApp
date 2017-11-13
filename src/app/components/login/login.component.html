@@ -1,118 +1,81 @@
 <div class="container">
 	<div class="row">
-		<div class="col-md-4">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-2 adminLogin">
-						<a href="" type="button" routerLink="/admin-login">Admin Login</a>
+		<div class="col-md-6 col-md-offset-3">
+			<div class="col-md-12 navTab">
+				<ul class="nav nav-tabs nav-justified">
+					<li class="active"><a data-toggle="tab" href="#menu1" >Login</a></li>
+					<li ><a data-toggle="tab" href="#home" >Register</a></li>
+				</ul>
+			</div>
+			<div class="tab-content ">
+				<div id="menu1" class="tab-pane fade in active">
+					<div class="panel panel-group">
+						<div class="col-md-6 col-md-offset-3">
+							<div class="panel-heading text-center">
+								<h2 class="text-center">Login</h2>
+							</div>
+						</div>
+						<div class="panel-body">
+							<div class="col-md-12">
+								<form >
+									<div class="panel-body">
+										<div class="form-group email">
+											<label for="email" >Email:</label>
+											<input type="email"  name="email" class="form-control" required placeholder="Email" [(ngModel)]='email'>
+										</div>
+										<div class="form-group">
+											<label for="password" >Password:</label>
+											<input type="password"  name="password" required class="form-control" placeholder="Password" [(ngModel)]='password'>
+										</div>
+										<div class="form-group email">
+											<button class="btn btn-block" type="button" (click)="signInWithEmail()">
+											Login with Email
+											</button>
+										</div>
+										
+										<span><h4>-OR-</h4></span>
+										<div class="form-group">
+											<button type="buton" class="btn btn-primary btn-block facebook" (click)="signInWithFacebook()">
+											<i class="fa fa-facebook" aria-hidden="true"></i>
+											Login with Facebook
+											</button>
+											<button type="button" class="btn google btn-block" (click)="signInWithGoogle()">
+											<i class="fa fa-google" aria-hidden="true"></i>
+											Login with Google
+											</button>
+										</div>
+										
+									</div>
+								</form>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
-			
-			<br>
-			<br>
-			<div class="container">
-				<div class="row">
-					
-					<div class="col-md-6 col-md-offset-3">
-						<ul class="nav nav-tabs nav-justified">
-							<li class="active"><a data-toggle="tab" href="#menu1" >Login</a></li>
-							<li ><a data-toggle="tab" href="#home" >Register</a></li>
-						</ul>
-					</div>
-					<div class="tab-content ">
-						<div id="menu1" class="tab-pane fade in active">
-							<div class="panel panel-group">
-								<div class="col-md-6 col-md-offset-3">
-									<div class="panel-heading text-center">
-										<h2 class="text-center">User Login</h2>
-									</div>
-								</div>
-								<div class="panel-body">
-									<div class="col-md-6 col-md-offset-3">
-										<form >
-											
-											
-											<div class="panel-body">
-												<div class="form-group email">
-													<label for="email" >Email:</label>
-													<input type="email"  name="email" class="form-control" required placeholder="Email" [(ngModel)]='email'>
-												</div>
-												<div class="form-group">
-													<label for="password" >Password:</label>
-													<input type="password"  name="password" required class="form-control" placeholder="Password" [(ngModel)]='password'>
-												</div>
-												<div class="form-group email">
-													<button class="btn btn-block" type="button" (click)="signInWithEmail()">
-													Login with Email
-													</button>
-												</div>
-												
-												<span><h4>-OR-</h4></span>
-												<div class="form-group">
-													<button type="buton" class="btn btn-primary btn-block facebook" (click)="signInWithFacebook()">
-													<i class="fa fa-facebook" aria-hidden="true"></i>
-													Login with Facebook
-													</button>
-													<button type="button" class="btn google btn-block" (click)="signInWithGoogle()">
-													<i class="fa fa-google" aria-hidden="true"></i>
-													Login with Google
-													</button>
-												</div>
-												
-											</div>
-										</form>
-									</div>
-								</div>
+				<div id="home" class="tab-pane fade">
+					<div class="panel panel-group">
+						<div class="col-md-6 col-md-offset-3">
+							<div class="panel-heading text-center">
+								<h2 class="text-center">User Register</h2>
 							</div>
 						</div>
-						<div id="home" class="tab-pane fade">
-							<div class="panel panel-group">
-								<div class="col-md-6 col-md-offset-3">
-									<div class="panel-heading text-center">
-										<h2 class="text-center">User Register</h2>
+						<div class="panel-body">
+							<div class="col-md-12">
+								<form (submit) = "onRegisterSubmit()">
+									<div class="form-group">
+										<label for="email" >Email:</label>
+										<input type="email" [(ngModel)] = "email" name="email" class="form-control" required placeholder="Email">
 									</div>
-								</div>
-								<div class="panel-body">
-									<div class="col-md-6 col-md-offset-3">
-										<!-- <form #f = 'ngForm' (submit) = "onRegisterSubmit(f)">
-																<div class="form-group">
-																						<label for="name" >Name:</label>
-																						<input type="text"  name="displayName" class="form-control" required placeholder="Name" [(ngModel)]='displayName' >
-																</div>
-																
-																<div class="form-group">
-																						<label for="email" >Email:</label>
-																						<input type="email"  name="email" class="form-control" required placeholder="Email" [(ngModel)]='email'>
-																</div>
-																<div class="form-group">
-																						<label for="password" >Password:</label>
-																						<input type="password"  name="password" required class="form-control" placeholder="Password" [(ngModel)]='password'>
-																</div>
-																<button class="btn btn-primary btn-block" type="submit" [disabled] ='f.invalid'>Register </button>
-										</form> -->
-										
-										<form (submit) = "onRegisterSubmit()">
-											<div class="form-group">
-												<label for="email" >Email:</label>
-												<input type="email" [(ngModel)] = "email" name="email" class="form-control" required placeholder="Email">
-											</div>
-											<div class="form-group">
-												<label for="password" >Password:</label>
-												<input type="password" [(ngModel)] = "password" name="password" required class="form-control" minlength="6" placeholder="Password">
-											</div>
-											<button class="btn btn-primary btn-block" type="submit">Register </button>
-										</form>
+									<div class="form-group">
+										<label for="password" >Password:</label>
+										<input type="password" [(ngModel)] = "password" name="password" required class="form-control" minlength="6" placeholder="Password">
 									</div>
-								</div>
+									<button class="btn btn-success btn-block" type="submit">Register </button>
+								</form>
 							</div>
 						</div>
 					</div>
-					
 				</div>
 			</div>
 		</div>
-		
 	</div>
-	
 </div>

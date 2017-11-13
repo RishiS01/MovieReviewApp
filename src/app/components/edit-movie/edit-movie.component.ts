@@ -27,6 +27,7 @@ export class EditMovieComponent implements OnInit {
   $key:string
   categories:any[];
   loader:boolean = false;
+  
   trailer:any;
   constructor(
   	public movieServiceService:MovieServiceService,
@@ -61,7 +62,7 @@ export class EditMovieComponent implements OnInit {
     })
   } 
   onUpdateMovie(f:NgForm){debugger
-    this.movie.trailer=f.value.trailer
+    // this.movie.trailer=f.value.trailer
     this.movieServiceService.updateMovie(this.$key,this.movie);
     this.router.navigate(['/admin-dashboard']);
   }

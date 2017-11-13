@@ -21,7 +21,7 @@
 							<img src="{{movie.movieImage}}" >
 						</div>
 								<!-- Loader -->
-						<div class="loader" *ngIf= "loader"></div>
+						<div class="loader" *ngIf= "loader" ></div>
 					</div>
 					<br>
 					<div class="col-md-8">
@@ -64,7 +64,7 @@
 								</div>
 							</div>
 							<div action="/file-upload" class="dropzone" id="my-awesome-dropzone"></div>
-							<div class="container castImage-container " *ngIf = "c.image">
+							<div class="container castImage-container " *ngIf = "c.image" required='image'>
 								<a class="glyphicon glyphicon-remove removeCastImage"  (click) = "deleteCastImageOnEdit(image,i)"></a>
 								<img src="{{c.image}}" class="img">
 
@@ -79,7 +79,7 @@
 						
 						<div class="form-group movieTrailer" >
 							<label for="movieTrailer">Movie Trailer:<h6>*paste youtube embeded code here</h6></label>
-							<input type="text" name="trailer" class="form-control" [(ngModel)]='trailer' required="trailer" placeholder="Movie Trailer">
+							<input type="text" name="trailer" class="form-control" [(ngModel)]='movie.trailer' required="trailer" placeholder="Movie Trailer">
 							<!-- <span  class="btn btn-warning btn-sm col-md-2" (click)='onAddVideoSource(trailer)'>Add Source</span> -->
 							<div class="col-md-12 movieTrailer">
 							<iframe width="560" height="315" [src]="movie.trailer | youtube" frameborder="0" allowfullscreen *ngIf='movie.trailer'></iframe>
@@ -88,7 +88,7 @@
 						<span  *ngIf='movie.trailer;else noTrailer'></span>
 					</div>
 				</div>
-				<button  type="submit" class="btn btn-primary pull-right" [disabled]='f.invalid'>Update</button>
+				<button  type="submit" class="btn btn-primary pull-right">Update</button>
 			</form>
 		</div>
 	</div>

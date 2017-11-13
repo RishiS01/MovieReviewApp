@@ -120,12 +120,12 @@ export class MovieServiceService {
 		// this.route.navigate(['/movie-detail'+ $key])
 	}
 	
-	// getUsers(){
-	// 	return this.angularFire.object(`/user`)
-	// 	.snapshotChanges().map(action => {debugger
- //   		 const $key = action.payload.key;
- //    	const data = { $key, ...action.payload.val() };
- //    	return data;
- //  		});
-	// }
+	getUsers(){
+		return this.angularFire.object(`/user`)
+		.snapshotChanges().map(action => {debugger
+   		 const $key = action.payload.key;
+    	const data = { $key, ...action.payload.val() };
+    	return data;
+  		});
+	}
 }

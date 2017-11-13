@@ -34,14 +34,15 @@ export class AdminLoginComponent implements OnInit {
   	this.authServiceService.onAdminLogin(this.email,this.password)
     .then((res:any) =>{debugger
       
-      // this.movieServiceService.getUsers().map(data=>{debugger
-      //   // data.map(obj=>{debugger
-      //     console.log(data)
-      //     if(res.uid === data.uid){
-      //       this.flashMessagesService.show('You are Logged in',{cssClass:'alert-success',timeout:2000});
-      //   this.router.navigate(['/admin-dashboard']);
-      //     }
-        // })
+      this.movieServiceService.getUsers().subscribe(data=>{
+        // data.map(obj=>{debugger
+          console.log(data)
+          
+          if(res.uid === data.uid){debugger
+            this.flashMessagesService.show('You are Logged in',{cssClass:'alert-success',timeout:2000});
+        this.router.navigate(['/admin-dashboard']);
+          }
+        })
       // })
     })
 

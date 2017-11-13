@@ -138,7 +138,7 @@ loader:boolean = false;
   onUploadCastImage($event,i){
   	console.log($event)
   	this.cast[i].image = $event[0].dataURL;
-    this.loader=false;
+    // this.loader=false;
     console.log(this.cast[i].image);
   }
   onUploadProgress($event){debugger

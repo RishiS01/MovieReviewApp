@@ -8,12 +8,13 @@
 				<img src="{{movie.movieImage}}" alt="Poster" class="title panel-body img-responsive" >
 			</div>
 			<div class="col-md-6">
-				<div><h2>{{movie.movieTitle}}</h2></div>
+				<div><h1>{{movie.movieTitle}}</h1></div>
 				<div>
 					{{movie.movieDescription}}
 				</div>
 			</div>
 		</div>
+		
 	
 	<div class="row ">
 		<div><h2>Cast</h2></div>
@@ -23,10 +24,24 @@
 			<div class="cast-image">
 				<img src="{{c.image}}" alt="Cast1" >
 			</div>
+			
 			</div>
 		</div>
 	</div>
+	<div>
+		<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		
+		<div class="video col-lg-offset-1"  *ngIf='movie.trailer;else noTrailer'>
+			<iframe width="560" height="315" [src]="movie.trailer | youtube" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>
 </div>
+		
+	</div>
+	
+</div>
+
 <div class="well well-sm">
 	<small>
     	<h4><a (click) = "showCommentInput = !showCommentInput"><i class="fa fa-comment" aria-hidden="true"></i> Comments:</a></h4>
@@ -52,14 +67,7 @@
     	</ul>
     </div>
 </div>
-<div class="row">
-	<div class="col-md-8 col-md-offset-2 well well-lg">
-		<h3></h3>
-		<div class="video col-lg-offset-1 panel-body"  *ngIf='movie.trailer;else noTrailer'>
-			<iframe width="560" height="315" [src]="movie.trailer | youtube" frameborder="0" allowfullscreen></iframe>
-		</div>
-	</div>
-</div>
+
 
 <ng-template #noTrailer>
 	<h4 class="noTrailer">No Trailer available now</h4>
