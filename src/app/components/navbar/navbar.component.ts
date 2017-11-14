@@ -27,24 +27,16 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
   	this.authServiceService.getAuth().subscribe(auth =>{
-
-      if(auth){
-  			this.isLoggedIn = true;
-  			// this.isloggedInUser = auth.displayName;
-        this.isloggedInUser = auth.email;
-        this.movieServiceService.getUserProfile(auth.uid).valueChanges().subscribe(data=>{
-
+    if(auth){
+  		this.isLoggedIn = true;
+  		this.isloggedInUser = auth.email;
+      this.movieServiceService.getUserProfile(auth.uid).valueChanges().subscribe(data=>{
       console.log(data)
-       this.profile=data || {} as Profile;
+      this.profile=data || {} as Profile;
     })
       }else{
   			this.isLoggedIn = false;
   		}
-  	
-    // this.movieServiceService.getUserProfile(auth.uid).valueChanges().subscribe(data=>{debugger
-    //   console.log(data)
-    //    this.profile=data || {} as Profile;
-    // })
     });
   }
 

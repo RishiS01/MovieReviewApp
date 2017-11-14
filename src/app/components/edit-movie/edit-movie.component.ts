@@ -13,12 +13,7 @@ export class EditMovieComponent implements OnInit {
   id:string;
   movie:any={};
 
-  // movie = {
-  //   movieTitle:'',
-  //   movieDescription:'',
-  //   movieImage:'',
-  //   cast:[]
-  // };
+ 
   cast=[{
     id: new Date().valueOf(),
     name:'',
@@ -37,17 +32,13 @@ export class EditMovieComponent implements OnInit {
 
   ngOnInit() {
   	this.$key = this.route.snapshot.params['id'];
-  	// this.movieServiceService.getMovies().subscribe(data=>{
-  	// 	this.movies=data;
-  	// })
-
     this.movieServiceService.getMovie(this.$key).valueChanges().subscribe(data=>{
       console.log(data);
        this.movie = data;
 
     }); 
     this.movieServiceService.getCategory().subscribe(data=>{
-      // this.movies = data;
+     
       console.log(data);
         let i = []
       Object.keys(data).forEach( key => {
@@ -61,7 +52,7 @@ export class EditMovieComponent implements OnInit {
       this.categories= i;
     })
   } 
-  onUpdateMovie(f:NgForm){debugger
+  onUpdateMovie(f:NgForm){
     // this.movie.trailer=f.value.trailer
     this.movieServiceService.updateMovie(this.$key,this.movie);
     this.router.navigate(['/admin-dashboard']);
@@ -73,7 +64,7 @@ export class EditMovieComponent implements OnInit {
     }
   }
   deleteCastImageOnEdit(image,i){
-    // this.cast.length-1;
+    
     if(confirm('Are you sure?')){
       const image = this.movie.cast[i].image;
       delete this.movie.cast[i].image

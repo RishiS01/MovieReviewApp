@@ -229,7 +229,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".image-container{\n    height: 250px;\n    width: 250px;\n    display: -ms-grid;\n    display: grid;\n    margin:0px 100px 0px 40px;\n    position: relative;\n}\n.remove{\n    color: red;\n    position: absolute;\n    right: 0;\n    text-decoration: none;\n    padding-top: 25px;\n   \n}\n.dropzone-div{\n\tbackground-color: #f2f2f2;\n\theight: 100px;\n    width: 200px;\n    position: relative;\n    border: 1px dotted black;\n    margin-top: 30px;\n}\n.dropzone-text{\n\t\n\tmargin: 0;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    margin-right: -50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%)\n}\n.castDiv{\n    background-color: #f2f2f2;\n    height: 100px;\n    width: 150px;\n    position: relative;\n    border: 1px dotted black;\n    margin-top: inherit;\n}\n.castSpan{\n    margin: 0;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    margin-right: -50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%)\n}\n.cast{\n    margin-top: 20px;\n}\n.addCast{\n   /* position: relative;*/\n    left: 155px;\n    bottom:100px;\n}\n.castName{\n    margin-bottom: 5px;\n}\n.removeCastImage{\n    color: red;\n    position: absolute;\n    right: 0;\n    text-decoration: none;\n    padding-top: 25px;\n}\n.castImage-container{\n    height: 250px;\n    width: 250px;\n    display: -ms-grid;\n    display: grid;\n    margin:0px 100px 0px -25px;\n    position: relative;\n}\nimg{\n    max-width: 80%\n}\n.req{\n    color: red;\n}\n.movieTrailer{\n    margin-top: 25px;\n}\nh6{\n    color: red;\n}\n.loader{\n\n  position: absolute;\n  left: 170%;\n  top: 220%;\n  z-index: 1;\n  width: 100px;\n  height: 100px;\n  margin: -75px 0 0 -75px;\n  border: 6px solid white;\n  border-radius: 50%;\n  border-top: 6px solid black;\n  border-bottom: 6px solid black;\n  \n  width: 120px;\n  height: 120px;\n  -webkit-animation: spin 2s linear infinite;\n  animation: spin 1s linear infinite;\n}\n\n@-webkit-keyframes spin {\n  0% { -webkit-transform: rotate(0deg); }\n  100% { -webkit-transform: rotate(360deg); }\n}\n/*.loader-cast{\n   position: absolute;\n  left: 19%;\n  top: 48%;\n  z-index: 1;\n  width: 100px;\n  height: 100px;\n  margin: -75px 0 0 -75px;\n  border: 5px solid white;\n  border-radius: 50%;\n  border-top: 5px solid black;\n  border-bottom: 5px solid black;\n  \n  width: 50px;\n  height: 50px;\n  -webkit-animation: spin 2s linear infinite;\n  animation: spin 1s linear infinite;\n}\n\n@-webkit-keyframes spin {\n  0% { -webkit-transform: rotate(0deg); }\n  100% { -webkit-transform: rotate(360deg); }\n}*/\n", ""]);
+exports.push([module.i, ".image-container{\n    height: 250px;\n    width: 250px;\n    display: -ms-grid;\n    display: grid;\n    margin:0px 100px 0px 40px;\n    position: relative;\n}\n.remove{\n    color: red;\n    position: absolute;\n    right: 0;\n    text-decoration: none;\n    padding-top: 25px;\n   \n}\n.dropzone-div{\n\tbackground-color: #f2f2f2;\n\theight: 100px;\n    width: 200px;\n    position: relative;\n    border: 1px dotted black;\n    margin-top: 30px;\n}\n.dropzone-text{\n\t\n\tmargin: 0;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    margin-right: -50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%)\n}\n.castDiv{\n    background-color: #f2f2f2;\n    height: 100px;\n    width: 150px;\n    position: relative;\n    border: 1px dotted black;\n    margin-top: inherit;\n}\n.castSpan{\n    margin: 0;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    margin-right: -50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%)\n}\n.cast{\n    margin-top: 20px;\n}\n.addCast{\n   /* position: relative;*/\n    left: 155px;\n    bottom:100px;\n}\n.castName{\n    margin-bottom: 5px;\n}\n.removeCastImage{\n    color: red;\n    position: absolute;\n    right: 0;\n    text-decoration: none;\n    padding-top: 25px;\n}\n.castImage-container{\n    height: 250px;\n    width: 250px;\n    display: -ms-grid;\n    display: grid;\n    margin:0px 100px 0px -25px;\n    position: relative;\n}\n.castImage-container img{\n  max-width: 60%; \n}\nimg{\n    max-width: 80%\n}\n.req{\n    color: red;\n}\n.movieTrailer{\n    margin-top: 25px;\n}\nh6{\n    color: red;\n}\n.loader{\n\n  position: absolute;\n  left: 170%;\n  top: 220%;\n  z-index: 1;\n  width: 100px;\n  height: 100px;\n  margin: -75px 0 0 -75px;\n  border: 6px solid white;\n  border-radius: 50%;\n  border-top: 6px solid black;\n  border-bottom: 6px solid black;\n  \n  width: 120px;\n  height: 120px;\n  -webkit-animation: spin 2s linear infinite;\n  animation: spin 1s linear infinite;\n}\n\n@-webkit-keyframes spin {\n  0% { -webkit-transform: rotate(0deg); }\n  100% { -webkit-transform: rotate(360deg); }\n}\n\n\n", ""]);
 
 // exports
 
@@ -242,7 +242,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/add-movie/add-movie.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n\t\n\t<div class=\"panel panel-primary\">\n\t\t<div class=\"panel-heading\">Add Movie</div>\n\t\t<div class=\"panel-body\">\n\t\t\t<form #f = \"ngForm\" (ngSubmit) = \"onAddMovie(f)\">\n\t\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t<div [dropzone]=\"config\" (error)=\"onUploadError($event)\" (processing)='onUploadProgress($event)' (success)=\"onUploadSuccess($event)\" *ngIf='!movie.movieImage'>\n\t\t\t\t\t\t\t<div class=\"dz-message\" data-dz-message>\n\t\t\t\t\t\t\t\t<div class=\"dropzone-div\"><span class=\"dropzone-text\">Add Movie Poster</span></div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div action=\"/file-upload\" class=\"dropzone\" id=\"my-awesome-dropzone\"></div>\n\t\t\t\t\t\t<div class=\"container image-container \" *ngIf = \"movie.movieImage\">\n\t\t\t\t\t\t\t<a class=\"glyphicon glyphicon-remove remove\" (click) = \"deleteMovieImage()\"></a>\n\t\t\t\t\t\t\t<img src=\"{{movie.movieImage}}\" >\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"loader\" *ngIf= \"loader\"></div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<br>\n\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t<label for=\"title\">Movie Title:</label>\n\t\t\t\t\t\t\t<input type=\"text\" name=\"movieTitle\" class=\"form-control\"  [(ngModel)]='movie.movieTitle' required=\"movieTitle\" #movieTitle='ngModel' placeholder=\"Movie Title\">\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div *ngIf = \"movieTitle?.errors?.required && movieTitle?.touched\" class=\"alert alert-danger\">\n\t\t\t\t\t\t\tName Required\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\n\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t<label for=\"summery\">Summary:</label>\n\t\t\t\t\t\t\t<textarea class=\"form-control\" rows=\"2\" name=\"movieDescription\" [(ngModel)]='movie.movieDescription' required=\"movieDescription\" #movieDescription='ngModel' placeholder=\"description..\"></textarea>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div *ngIf = \"movieDescription?.errors?.required && movieDescription?.touched\" class=\"alert alert-danger\">\n\t\t\t\t\t\t\tRequired\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t<label for=\"genres\">Genres list (select one):</label>\n      \t\t\t\t\t\t<select class=\"form-control\" id=\"genres\" [(ngModel)]='movie.movieGenre' required=\"movieGenre\" name=\"movieGenre\" #movieGenre='ngModel'>\n        \t\t\t\t\t\t<option *ngFor='let cat of categories'>{{cat.name}}</option>\n     \t\t\t\t\t\t</select>\n  \t\t\t\t\t\t</div>\n  \t\t\t\t\t\t<!-- <div *ngIf='movieGenre?.errors?.required && movieGenre?.touched' class=\"alert alert-danger\">\n  \t\t\t\t\t\t\tRequired\n  \t\t\t\t\t\t</div> -->\n\n\t\t\t\t\t\t<div class=\"form-group cast\" *ngFor='let c of cast ;let i = index '>\n\t\t\t\t\t\t\t<label for=\"cast\">Cast:</label>\n\t\t\t\t\t\t\t<div class=\"castName\">\n\t\t\t\t\t\t\t\t<input type=\"text\" name=\"name\" [value]='c.name' (input)= \"c.name= $event.target.value\" required=\"name\"  placeholder=\"Cast Name\" >\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div *ngIf = \"name?.errors?.required && name?.touched\" class=\"alert alert-danger\">\n\t\t\t\t\t\t\t\tCast Name Required\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div [dropzone]=\"config\" (error)=\"onUploadError($event)\" (processing)='onUploadProgress($event)' (success)=\"onUploadCastImage($event,i)\" name = \"image\" *ngIf = \"!c.image\">\n\t\t\t\t\t\t\t\t<div class=\"dz-message \" data-dz-message>\n\t\t\t\t\t\t\t\t\t<div class=\"dropzone-div castDiv\"><span class=\"dropzone-text castSpan\">Add cast Pic</span></div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div action=\"/file-upload\" class=\"dropzone\" id=\"my-awesome-dropzone\"></div>\n\t\t\t\t\t\t\t<div class=\"container castImage-container \" *ngIf = \"c.image\">\n\t\t\t\t\t\t\t\t<a class=\"glyphicon glyphicon-remove removeCastImage\" (click) = \"deleteCastImage(image,i)\"></a>\n\t\t\t\t\t\t\t\t<img src=\"{{c.image}}\" >\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<!-- <div class=\"loader-cast\" *ngIf= \"loader-cast && !c.image\"></div> -->\n\t\t\t\t\t\t\t<a  class=\"btn btn-danger btn-sm \"  (click)=\"removeCast(cast,i)\" >Delete</a>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"addCastDiv\">\n\t\t\t\t\t\t\t<a class=\"btn btn-warning btn-sm addCast\" (click)='onAddCast()'>Add Cast</a>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\n\t\t\t\t\t\t<div class=\"form-group movieTrailer\">\n\t\t\t\t\t\t\t<label for=\"movieTrailer\">Movie Trailer:<h6>*paste youtube embeded code here</h6></label>\n\n\t\t\t\t\t\t\t<input type=\"text\" name=\"trailer\" class=\"form-control\" [(ngModel)]='trailer' required=\"trailer\" placeholder=\"Movie Trailer\">\n\t\t\t\t\t\t\t<!-- <span  class=\"btn btn-warning btn-sm col-md-2\" (click)='onAddVideoSource(trailer)'>Add Source</span> -->\n\t\t\t\t\t\t\t<div class=\"col-md-12 movieTrailer\">\n\t\t\t\t\t\t\t<iframe width=\"560\" height=\"315\" [src]=\"trailer | youtube\" frameborder=\"0\" allowfullscreen *ngIf='trailer'></iframe>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<button  type=\"submit\" class=\"btn btn-primary pull-right\" [disabled]='f.invalid'>Add Movie</button>\n\t\t\t</form>\n\t\t\t\n\t\t</div>\n\t</div>\n</div>"
+module.exports = "<div class=\"container\">\n\t\n\t<div class=\"panel panel-primary\">\n\t\t<div class=\"panel-heading\">Add Movie</div>\n\t\t<div class=\"panel-body\">\n\t\t\t<form #f = \"ngForm\" (ngSubmit) = \"onAddMovie(f)\">\n\t\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t<div [dropzone]=\"config\" (error)=\"onUploadError($event)\" (processing)='onUploadProgress($event)' (success)=\"onUploadSuccess($event)\" *ngIf='!movie.movieImage'>\n\t\t\t\t\t\t\t<div class=\"dz-message\" data-dz-message>\n\t\t\t\t\t\t\t\t<div class=\"dropzone-div\"><span class=\"dropzone-text\">Add Movie Poster</span></div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div action=\"/file-upload\" class=\"dropzone\" id=\"my-awesome-dropzone\"></div>\n\t\t\t\t\t\t<div class=\"container image-container \" *ngIf = \"movie.movieImage\">\n\t\t\t\t\t\t\t<a class=\"glyphicon glyphicon-remove remove\" (click) = \"deleteMovieImage()\"></a>\n\t\t\t\t\t\t\t<img src=\"{{movie.movieImage}}\" >\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"loader\" *ngIf= \"loader\"></div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<br>\n\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t<label for=\"title\">Movie Title:</label>\n\t\t\t\t\t\t\t<input type=\"text\" name=\"movieTitle\" class=\"form-control\"  [(ngModel)]='movie.movieTitle' required=\"movieTitle\" #movieTitle='ngModel' placeholder=\"Movie Title\">\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div *ngIf = \"movieTitle?.errors?.required && movieTitle?.touched\" class=\"alert alert-danger\">\n\t\t\t\t\t\t\tName Required\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\n\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t<label for=\"summery\">Summary:</label>\n\t\t\t\t\t\t\t<textarea class=\"form-control\" rows=\"2\" name=\"movieDescription\" [(ngModel)]='movie.movieDescription' required=\"movieDescription\" #movieDescription='ngModel' placeholder=\"description..\"></textarea>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div *ngIf = \"movieDescription?.errors?.required && movieDescription?.touched\" class=\"alert alert-danger\">\n\t\t\t\t\t\t\tRequired\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t<label for=\"genres\">Genres list (select one):</label>\n      \t\t\t\t\t\t<select class=\"form-control\" id=\"genres\" [(ngModel)]='movie.movieGenre' required=\"movieGenre\" name=\"movieGenre\" #movieGenre='ngModel'>\n        \t\t\t\t\t\t<option *ngFor='let cat of categories'>{{cat.name}}</option>\n     \t\t\t\t\t\t</select>\n  \t\t\t\t\t\t</div>\n  \t\t\t\t\t\n\t\t\t\t\t\t<div class=\"form-group cast\" *ngFor='let c of cast ;let i = index '>\n\t\t\t\t\t\t\t<label for=\"cast\">Cast:</label>\n\t\t\t\t\t\t\t<div class=\"castName\">\n\t\t\t\t\t\t\t\t<input type=\"text\" name=\"name\" [value]='c.name' (input)= \"c.name= $event.target.value\" required=\"name\"  placeholder=\"Cast Name\" >\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div *ngIf = \"name?.errors?.required && name?.touched\" class=\"alert alert-danger\">\n\t\t\t\t\t\t\t\tCast Name Required\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div [dropzone]=\"config\" (error)=\"onUploadError($event)\" (processing)='onUploadProgress($event)' (success)=\"onUploadCastImage($event,i)\" name = \"image\" *ngIf = \"!c.image\">\n\t\t\t\t\t\t\t\t<div class=\"dz-message \" data-dz-message>\n\t\t\t\t\t\t\t\t\t<div class=\"dropzone-div castDiv\"><span class=\"dropzone-text castSpan\">Add cast Pic</span></div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div action=\"/file-upload\" class=\"dropzone\" id=\"my-awesome-dropzone\"></div>\n\t\t\t\t\t\t\t<div class=\"container castImage-container \" *ngIf = \"c.image\">\n\t\t\t\t\t\t\t\t<a class=\"glyphicon glyphicon-remove removeCastImage\" (click) = \"deleteCastImage(image,i)\"></a>\n\t\t\t\t\t\t\t\t<img src=\"{{c.image}}\" >\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<!-- <div class=\"loader-cast\" *ngIf= \"loader-cast && !c.image\"></div> -->\n\t\t\t\t\t\t\t<a  class=\"btn btn-danger btn-sm \"  (click)=\"removeCast(cast,i)\" >Delete</a>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"addCastDiv\">\n\t\t\t\t\t\t\t<a class=\"btn btn-warning btn-sm addCast\" (click)='onAddCast()'>Add Cast</a>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\n\t\t\t\t\t\t<div class=\"form-group movieTrailer\">\n\t\t\t\t\t\t\t<label for=\"movieTrailer\">Movie Trailer:<h6>*paste youtube embeded code here</h6></label>\n\n\t\t\t\t\t\t\t<input type=\"text\" name=\"trailer\" class=\"form-control\" [(ngModel)]='trailer' required=\"trailer\" placeholder=\"Movie Trailer\">\n\t\t\t\t\t\t\t<!-- <span  class=\"btn btn-warning btn-sm col-md-2\" (click)='onAddVideoSource(trailer)'>Add Source</span> -->\n\t\t\t\t\t\t\t<div class=\"col-md-12 movieTrailer\">\n\t\t\t\t\t\t\t<iframe width=\"560\" height=\"315\" [src]=\"trailer | youtube\" frameborder=\"0\" allowfullscreen *ngIf='trailer'></iframe>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<button  type=\"submit\" class=\"btn btn-primary pull-right\" [disabled]='f.invalid'>Add Movie</button>\n\t\t\t</form>\n\t\t\t\n\t\t</div>\n\t</div>\n</div>"
 
 /***/ }),
 
@@ -324,31 +324,6 @@ var AddMovieComponent = (function () {
         this.flashMessagesService.show('Movie added', { cssClass: 'alert-success', timeout: 1500 });
         this.router.navigate(['/admin-dashboard']);
     };
-    //   YouTubeGetID(url){debugger
-    //   let ID = '';
-    //   url = url.replace(/(>|<)/gi,'').split(/(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/)/);
-    //   if(url[2] !== undefined) {
-    //     ID = url[2].split(/[^0-9a-z_\-]/i);
-    //     ID = ID[0];
-    //   }
-    //   else {
-    //     ID = url;
-    //   }
-    //      return ID;
-    //    // this.getEmbededUrl(ID)
-    // }
-    //   onAddVideoSource(abc){debugger
-    //    this.video=abc
-    //    this.YouTubeGetID(abc)
-    //   }
-    // getEmbededUrl(a){
-    //   if(!_.isEmpty(a)){
-    //     console.log(a);
-    //     return this.satitizer.bypassSecurityTrustResourceUrl( a);  
-    //   }else{
-    //     return false;
-    //   }
-    // }
     AddMovieComponent.prototype.onAddCast = function () {
         this.cast.push({
             id: new Date().valueOf(),
@@ -386,11 +361,10 @@ var AddMovieComponent = (function () {
     AddMovieComponent.prototype.onUploadCastImage = function ($event, i) {
         console.log($event);
         this.cast[i].image = $event[0].dataURL;
-        // this.loader=false;
+        this.loader = false;
         console.log(this.cast[i].image);
     };
     AddMovieComponent.prototype.onUploadProgress = function ($event) {
-        debugger;
         this.loader = true;
     };
     return AddMovieComponent;
@@ -417,7 +391,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "li{\n\tlist-style: none;\n}\nimg{\n\tmax-width: 100%;\n\t/*height: 200px;*/\n\tmargin: 0 auto;\n}\n.image-container{\n\theight: 300px;\n\twidth: 300px;\n\tdisplay: -ms-grid;\n\tdisplay: grid;\n\tmargin: 0 auto;\n}\nh4{\n    color: white;\n    text-align: center;\n}\nh5{\n\ttext-align: center;\n}\n.delete{\n    color: red;\n}\n.add-cat{\n    text-align: center;\n}\n.cataegory {\n    height: 100%;\n    width: 0;\n    position: fixed;\n    z-index: 1;\n    top: 0;\n    left: 0;\n    background-color: #111;\n    overflow-x: hidden;\n    transition: 0.5s;\n    padding-top: 60px;\n}\n\n.cataegory a {\n    padding: 8px 8px 8px 32px;\n    text-decoration: none;\n    font-size: 25px;\n    color: #818181;\n    display: block;\n    transition: 0.3s;\n}\n\n.cataegory a:hover {\n    color: #f1f1f1;\n}\n\n.cataegory .closebtn {\n    position: absolute;\n    top: 0;\n    right: 25px;\n    font-size: 36px;\n    margin-left: 50px;\n}\n.sidebar{\n    font-size:30px;\n    cursor:pointer;\n    \n   /* width: 260px;\n    height: 700px;*/\n    margin-left: -300px;\n}\n\n\n", ""]);
+exports.push([module.i, "li{\n\tlist-style: none;\n}\nimg{\n\tmax-width: 80%;\n\tmargin: 0 auto;\n    padding: 10px;\n}\n.image-container{\n\theight: 300px;\n\twidth: 280px;\n\tdisplay: -ms-grid;\n\tdisplay: grid;\n\tmargin: 0 auto;\n}\nh4{\n    color: white;\n    text-align: center;\n}\nh5{\n\ttext-align: center;\n}\n.delete{\n    color: red;\n}\n.add-cat{\n    text-align: center;\n}\n.cataegory {\n    height: 100%;\n    width: 0;\n    position: fixed;\n    z-index: 1;\n    top: 0;\n    left: 0;\n    background-color: #111;\n    overflow-x: hidden;\n    transition: 0.5s;\n    padding-top: 60px;\n}\n\n.cataegory a {\n    padding: 8px 8px 8px 32px;\n    text-decoration: none;\n    font-size: 25px;\n    color: #818181;\n    display: block;\n    transition: 0.3s;\n}\n\n.cataegory a:hover {\n    color: #f1f1f1;\n}\n\n.cataegory .closebtn {\n    position: absolute;\n    top: 0;\n    right: 25px;\n    font-size: 36px;\n    margin-left: 50px;\n}\n.sidebar{\n    font-size:30px;\n    cursor:pointer;\n    margin-left: -300px;\n}\n\n\n", ""]);
 
 // exports
 
@@ -487,14 +461,12 @@ var AdminDashboardComponent = (function () {
                     data[key].$key = key;
                     i.push(data[key]);
                 }
-                // console.log(key);
             });
             console.log(i);
             _this.categories = i;
         });
         this.id = this.route.snapshot.params['id'];
         this.movieServiceService.getMovies().subscribe(function (data) {
-            // this.movies = data;
             console.log(data);
             var x = [];
             Object.keys(data).forEach(function (key) {
@@ -509,7 +481,6 @@ var AdminDashboardComponent = (function () {
         });
     };
     AdminDashboardComponent.prototype.onDeleteMovie = function (m) {
-        debugger;
         if (confirm('Are you sure?')) {
             this.movieServiceService.deleteMovie(m);
             this.flashMessagesService.show('Movie deleted', { cssClass: 'alert-success', timeout: 1000 });
@@ -596,7 +567,6 @@ var AdminLoginComponent = (function () {
         this.movieServiceService = movieServiceService;
         this.admin = false;
         this.authServiceService.getAuth().subscribe(function (auth) {
-            // let aid=auth.uid ;Tu3hdIqMYqei8MOUmoNAcyaTfMT2
         });
     }
     AdminLoginComponent.prototype.ngOnInit = function () {
@@ -796,15 +766,12 @@ var ChangePasswordComponent = (function () {
     };
     ChangePasswordComponent.prototype.onChangeUserPassword = function (f) {
         var _this = this;
-        debugger;
         var newPassword = f.value.newPassword;
         var user = __WEBPACK_IMPORTED_MODULE_1_firebase__["auth"]().currentUser;
         __WEBPACK_IMPORTED_MODULE_1_firebase__["auth"]().currentUser.reauthenticateWithCredential(__WEBPACK_IMPORTED_MODULE_1_firebase__["auth"].EmailAuthProvider.credential(__WEBPACK_IMPORTED_MODULE_1_firebase__["auth"]().currentUser.email, f.value.password))
             .then(function (res) {
-            debugger;
             console.log(f.value.password, __WEBPACK_IMPORTED_MODULE_1_firebase__["auth"]().currentUser.email);
             user.updatePassword(newPassword).then(function (res) {
-                debugger;
                 console.log(newPassword);
                 _this.flashMessagesService.show('Password Updated', { cssClass: 'alert-success', timeout: 1500 });
                 _this.router.navigate(['']);
@@ -840,7 +807,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "\n.image-container{\n    height: 250px;\n    width: 250px;\n    display: -ms-grid;\n    display: grid;\n    margin:0px 100px 0px 40px;\n    position: relative;\n}\n.remove{\n    color: red;\n    position: absolute;\n    right: 0;\n    text-decoration: none;\n    padding-top: 25px;\n   \n}\n.dropzone-div{\n\tbackground-color: #f2f2f2;\n\theight: 100px;\n    width: 200px;\n    position: relative;\n    border: 1px dotted black;\n    margin-top: 30px;\n}\n.dropzone-text{\n\t\n\tmargin: 0;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    margin-right: -50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%)\n}\n.castDiv{\n    background-color: #f2f2f2;\n    height: 100px;\n    width: 150px;\n    position: relative;\n    border: 1px dotted black;\n    margin-top: inherit;\n}\n.castSpan{\n    margin: 0;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    margin-right: -50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%)\n}\n.cast{\n    margin-top: 20px;\n    position: relative;\n}\n.addCast{\n   /* position: relative;*/\n    left: 155px;\n    bottom:100px;\n}\n.castName{\n    margin-bottom: 5px;\n}\n.removeCastImage{\n    color: red;\n    position: absolute;\n    right: 0;\n    text-decoration: none;\n    padding-top: 25px;\n}\n.castImage-container{\n    height: 300px;\n    width: 250px;\n    display: -ms-grid;\n    display: grid;\n    margin:0px 100px 0px -25px;\n    position: relative;\n}\nimg{\n    max-width: 80%;\n    \n}\n.deleteCast{\n    position: absolute;\n    left: 200px;\n    bottom: 100px;\n}\nh6{ color: red; } \nh4{\n  color: red;\n}\n.movieTrailer{\n  margin:10px;\n}\n\n.loader{\n\n  position: absolute;\n\n  left: 170%;\n  top: 230%;\n  z-index: 1;\n  width: 100px;\n  height: 100px;\n  margin: -75px 0 0 -75px;\n  border: 5px solid white;\n  border-radius: 50%;\n  border-top: 5px solid black;\n  border-bottom: 5px solid black;\n  \n  width: 85px;\n  height: 85px;\n  -webkit-animation: spin 2s linear infinite;\n  animation: spin 1s linear infinite;\n}\n\n@-webkit-keyframes spin {\n  0% { -webkit-transform: rotate(0deg); }\n  100% { -webkit-transform: rotate(360deg); }\n}\n/*.loader-cast{\n   position: absolute;\n  left: 19%;\n  top: 48%;\n  z-index: 1;\n  width: 100px;\n  height: 100px;\n  margin: -75px 0 0 -75px;\n  border: 5px solid white;\n  border-radius: 50%;\n  border-top: 5px solid black;\n  border-bottom: 5px solid black;\n  \n  width: 50px;\n  height: 50px;\n  -webkit-animation: spin 2s linear infinite;\n  animation: spin 1s linear infinite;\n}\n\n@-webkit-keyframes spin {\n  0% { -webkit-transform: rotate(0deg); }\n  100% { -webkit-transform: rotate(360deg); }\n}*/\n\n\n", ""]);
+exports.push([module.i, "\n.image-container{\n    height: 250px;\n    width: 250px;\n    display: -ms-grid;\n    display: grid;\n    margin:0px 100px 0px 40px;\n    position: relative;\n}\n.remove{\n    color: red;\n    position: absolute;\n    right: 0;\n    text-decoration: none;\n    padding-top: 25px;\n   \n}\n.dropzone-div{\n\tbackground-color: #f2f2f2;\n\theight: 100px;\n    width: 200px;\n    position: relative;\n    border: 1px dotted black;\n    margin-top: 30px;\n}\n.dropzone-text{\n\t\n\tmargin: 0;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    margin-right: -50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%)\n}\n.castDiv{\n    background-color: #f2f2f2;\n    height: 100px;\n    width: 150px;\n    position: relative;\n    border: 1px dotted black;\n    margin-top: inherit;\n}\n.castSpan{\n    margin: 0;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    margin-right: -50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%)\n}\n.cast{\n    margin-top: 20px;\n    position: relative;\n}\n.addCast{\n   /* position: relative;*/\n    left: 155px;\n    bottom:100px;\n}\n.castName{\n    margin-bottom: 5px;\n}\n.removeCastImage{\n    color: red;\n    position: absolute;\n    right: 0;\n    text-decoration: none;\n    padding-top: 25px;\n}\n.castImage-container{\n    height: 300px;\n    width: 250px;\n    display: -ms-grid;\n    display: grid;\n    margin:0px 100px 0px -25px;\n    position: relative;\n}\nimg{\n    max-width: 80%;\n    \n}\n.deleteCast{\n    position: absolute;\n    left: 200px;\n    bottom: 100px;\n}\nh6{ color: red; } \nh4{\n  color: red;\n}\n.movieTrailer{\n  margin:10px;\n}\n\n.loader{\n\n  position: absolute;\n\n  left: 170%;\n  top: 230%;\n  z-index: 1;\n  width: 100px;\n  height: 100px;\n  margin: -75px 0 0 -75px;\n  border: 5px solid white;\n  border-radius: 50%;\n  border-top: 5px solid black;\n  border-bottom: 5px solid black;\n  \n  width: 85px;\n  height: 85px;\n  -webkit-animation: spin 2s linear infinite;\n  animation: spin 1s linear infinite;\n}\n\n@-webkit-keyframes spin {\n  0% { -webkit-transform: rotate(0deg); }\n  100% { -webkit-transform: rotate(360deg); }\n}\n\n\n", ""]);
 
 // exports
 
@@ -883,12 +850,6 @@ var EditMovieComponent = (function () {
         this.router = router;
         this.route = route;
         this.movie = {};
-        // movie = {
-        //   movieTitle:'',
-        //   movieDescription:'',
-        //   movieImage:'',
-        //   cast:[]
-        // };
         this.cast = [{
                 id: new Date().valueOf(),
                 name: '',
@@ -899,15 +860,11 @@ var EditMovieComponent = (function () {
     EditMovieComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.$key = this.route.snapshot.params['id'];
-        // this.movieServiceService.getMovies().subscribe(data=>{
-        // 	this.movies=data;
-        // })
         this.movieServiceService.getMovie(this.$key).valueChanges().subscribe(function (data) {
             console.log(data);
             _this.movie = data;
         });
         this.movieServiceService.getCategory().subscribe(function (data) {
-            // this.movies = data;
             console.log(data);
             var i = [];
             Object.keys(data).forEach(function (key) {
@@ -922,7 +879,6 @@ var EditMovieComponent = (function () {
         });
     };
     EditMovieComponent.prototype.onUpdateMovie = function (f) {
-        debugger;
         // this.movie.trailer=f.value.trailer
         this.movieServiceService.updateMovie(this.$key, this.movie);
         this.router.navigate(['/admin-dashboard']);
@@ -934,7 +890,6 @@ var EditMovieComponent = (function () {
         }
     };
     EditMovieComponent.prototype.deleteCastImageOnEdit = function (image, i) {
-        // this.cast.length-1;
         if (confirm('Are you sure?')) {
             var image_1 = this.movie.cast[i].image;
             delete this.movie.cast[i].image;
@@ -998,7 +953,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "li{\n\tlist-style: none;\n}\nimg{\n\tmax-width: 100%;\n\t/*height: 200px;*/\n\tmargin: 0 auto;\n}\n.image-container{\n\theight: 300px;\n\twidth: 300px;\n\tdisplay: -ms-grid;\n\tdisplay: grid;\n\tmargin: 0 auto;\n}\nh5{\n\ttext-align: center;\n}\n.delete{\n\tcolor: red;\n\t\n}\nh4{\n\ttext-align: center;\n\tcolor:red;\n}", ""]);
+exports.push([module.i, "li{\n\tlist-style: none;\n}\nimg{\n\tmax-width: 80%;\n\tmargin: 0 auto;\n\tpadding: 10px;\n}\n.image-container{\n\theight: 300px;\n\twidth: 280px;\n\tdisplay: -ms-grid;\n\tdisplay: grid;\n\tmargin: 0 auto;\n}\nh3{\n\ttext-align: center;\n\tcolor:red;\n}\n.delete{\n\tcolor: red;\n\t\n}\nh4{\n\ttext-align: center;\n\t\n}\n", ""]);
 
 // exports
 
@@ -1011,7 +966,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/favourate/favourate.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div >\n\t<a href=\"#\" routerLink = '' class=\"btn btn-link\"><span class=\"glyphicon glyphicon-arrow-left\"></span> Back to Main Page</a>\n</div>\n<div class=\"container\">\n\t<div class=\"row\" *ngIf='movie?.length >0; else noMovie'>\n\t\t<div>\n\t\t\t<ul>\n\t\t\t\t<li *ngFor='let mov of movie' class=\"col-md-4 col-xs-12\">\n\t\t\t\t\t<div class=\"panel panel-primary\">\n\t\t\t\t\t\t\n\t\t\t\t\t\t<div class=\"panel-body\">\n\t\t\t\t\t\t\t<div><a  data-toggle=\"tooltip\" data-placement=\"top\" title=\"Remove as Favourite\" class=\"glyphicon glyphicon-remove pull-right delete\" (click)= \"onRemoveFavourate(mov)\"></a></div>\n\t\t\t\t\t\t\t<div class=\"container image-container\">\n\t\t\t\t\t\t\t\t<img  src=\"{{mov.movieImage}}\" >\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div>\n\t\t\t\t\t\t\t\t<span><h5>{{mov.movieTitle}}</h5></span>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"panel-footer\">\n\t\t\t\t\t\t\t<!-- <a href=\"\" [routerLink] =\"['/edit-movie/'+m.$key]\" ><i class=\"glyphicon glyphicon-pencil\"></i> Edit Movie</a> \t -->\n\t\t\t\t\t\t\t<a href=\"\" [routerLink] =\"['/movie-detail/'+mov.$key]\" >View Details...</a>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</li>\n\t\t\t</ul>\n\t\t</div>\n\t</div>\n</div>\n<ng-template #noMovie>\n\t<h4>No favourites to show</h4>\n</ng-template>"
+module.exports = "<div >\n\t<a href=\"#\" routerLink = '' class=\"btn btn-link\"><span class=\"glyphicon glyphicon-arrow-left\"></span> Back to Main Page</a>\n</div>\n<div class=\"container\">\n\t<div class=\"row\" *ngIf='movie?.length >0; else noMovie'>\n\t\t<div>\n\t\t\t<ul>\n\t\t\t\t<li *ngFor='let mov of movie' class=\"col-md-4 col-xs-12\" >\n\t\t\t\t\t<div class=\"panel panel-primary\">\n\t\t\t\t\t\t\n\t\t\t\t\t\t<div class=\"panel-body\">\n\t\t\t\t\t\t\t<div><a  data-toggle=\"tooltip\" data-placement=\"top\" title=\"Remove as Favourite\" class=\"glyphicon glyphicon-remove pull-right delete\" (click)= \"onRemoveFavourate(mov)\"></a></div>\n\t\t\t\t\t\t\t<div class=\"container image-container\" [routerLink] =\"['/movie-detail/'+mov.$key]\">\n\t\t\t\t\t\t\t\t<img  src=\"{{mov.movieImage}}\" >\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div>\n\t\t\t\t\t\t\t\t<span><h4>{{mov.movieTitle}}</h4></span>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</li>\n\t\t\t</ul>\n\t\t</div>\n\t</div>\n</div>\n<ng-template #noMovie>\n\t<h3>No favourites to show</h3>\n</ng-template>"
 
 /***/ }),
 
@@ -1045,43 +1000,41 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var FavourateComponent = (function () {
     function FavourateComponent(movieServiceServices, flashMessagesService, authServiceService, router, route) {
+        var _this = this;
         this.movieServiceServices = movieServiceServices;
         this.flashMessagesService = flashMessagesService;
         this.authServiceService = authServiceService;
         this.router = router;
         this.route = route;
         this.movie = {};
+        this.authServiceService.getAuth().subscribe(function (auth) {
+            _this.Authuser = auth;
+        });
     }
     FavourateComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.id = this.route.snapshot.params['id'];
-        this.authServiceService.getAuth().subscribe(function (auth) {
-            _this.movieServiceServices.getUserFavourite(auth.uid).valueChanges().subscribe(function (data) {
-                console.log(data);
-                if (!__WEBPACK_IMPORTED_MODULE_5_lodash___default.a.isEmpty(data)) {
-                    var i_1 = [];
-                    Object.keys(data).forEach(function (key) {
-                        if (key !== "$key") {
-                            data[key].$key = key;
-                            i_1.push(data[key]);
-                        }
-                    });
-                    console.log(i_1);
-                    _this.movie = i_1;
-                    // console.log('hello');
-                }
-                else {
-                    _this.movie = {};
-                }
-            });
+        this.movieServiceServices.getUserFavourite(this.Authuser.uid).valueChanges().subscribe(function (data) {
+            console.log(data);
+            if (!__WEBPACK_IMPORTED_MODULE_5_lodash___default.a.isEmpty(data)) {
+                var i_1 = [];
+                Object.keys(data).forEach(function (key) {
+                    if (key !== "$key") {
+                        data[key].$key = key;
+                        i_1.push(data[key]);
+                    }
+                });
+                console.log(i_1);
+                _this.movie = i_1;
+            }
+            else {
+                _this.movie = {};
+            }
         });
     };
     FavourateComponent.prototype.onRemoveFavourate = function (mov) {
-        var _this = this;
         if (confirm('Are you sure?')) {
-            this.authServiceService.getAuth().subscribe(function (auth) {
-                _this.movieServiceServices.removeMovieAsfavourate(auth.uid, mov);
-            });
+            this.movieServiceServices.removeMovieAsfavourate(this.Authuser.uid, mov);
             this.router.navigate(['/favourate']);
             this.flashMessagesService.show('Removed as Favourite', { cssClass: 'alert-success', timeout: 1500 });
         }
@@ -1110,7 +1063,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "li{\n\tlist-style: none;\n}\nimg{\n\tmax-width: 100%;\n\tmargin: 0 auto;\n\n}\n.image-container{\n\theight: 300px;\n\twidth: 300px;\n\tdisplay: -ms-grid;\n\tdisplay: grid;\n\tmargin: 0 auto;\n\t/*padding: 0px;*/\n}\nh5,h3{\n\ttext-align: center;\n}\n.panel-body{\n\tpadding: 0px;\n}\nh4{\n\tcolor: red;\n\ttext-align: center;\n}\n\n", ""]);
+exports.push([module.i, "li{\n\tlist-style: none;\n}\nimg{\n\tmax-width: 80%;\n\tmargin: 0 auto;\n\tpadding: 10px;\n\n}\n.image-container{\n\theight: 300px;\n\twidth: 280px;\n\tdisplay: -ms-grid;\n\tdisplay: grid;\n\tmargin: 0 auto;\n\t/*padding: 0px;*/\n}\nh5,h3{\n\ttext-align: center;\n}\n.panel-body{\n\tpadding: 0px;\n}\nh4{\n\tcolor: red;\n\ttext-align: center;\n}\n\n", ""]);
 
 // exports
 
@@ -1123,7 +1076,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/genres/genres.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div >\n\t<a href=\"#\" routerLink = '' class=\"btn btn-link\"><span class=\"glyphicon glyphicon-arrow-left\"></span> Back to Main Page</a>\n</div>\n<div>\n\t<h3>{{name}}</h3>\n\t<div class=\"row\" *ngIf='movie?.length>0;else noMovie'>\n\t\t<ul>\n\t\t\t<li *ngFor=\"let mov of movie; let i = index; \" class=\"col-md-4\">\n\t\t\t\t<div class=\"panel panel-default\">\n\t\t\t\t\t<!-- <div class=\"panel-heading\">{{m.movieTitle}}</div> -->\n\t\t\t\t\t<div class=\"panel-body\">\n\t\t\t\t\t\t<div class=\"container image-container\">\n\t\t\t\t\t\t\t<img src=\"{{mov.movieImage}}\" >\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div>\n\t\t\t\t\t\t\t<span><h5>{{mov.movieTitle}}</h5></span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"panel-footer\">\n\t\t\t\t\t\t<a href=\"\" [routerLink] =\"['/movie-detail/'+mov.$key]\" >View Details...</a>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t</ul>\n\t</div>\n</div>\n<ng-template #noMovie>\n\t<h4>No Movies in this Catageory</h4>\n</ng-template>"
+module.exports = "<div >\n\t<a href=\"#\" routerLink = '' class=\"btn btn-link\"><span class=\"glyphicon glyphicon-arrow-left\"></span> Back to Main Page</a>\n</div>\n<div>\n\t<h3>{{name}}</h3>\n\t<div class=\"row\" *ngIf='movie?.length>0;else noMovie'>\n\t\t<ul>\n\t\t\t<li *ngFor=\"let mov of movie; let i = index; \" class=\"col-md-4\" >\n\t\t\t\t<div class=\"panel panel-default\">\n\t\t\t\t\t<!-- <div class=\"panel-heading\">{{m.movieTitle}}</div> -->\n\t\t\t\t\t<div class=\"panel-body\" [routerLink] =\"['/movie-detail/'+mov.$key]\">\n\t\t\t\t\t\t<div class=\"container image-container\">\n\t\t\t\t\t\t\t<img src=\"{{mov.movieImage}}\" >\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div>\n\t\t\t\t\t\t\t<span><h3>{{mov.movieTitle}}</h3></span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t</ul>\n\t</div>\n</div>\n<ng-template #noMovie>\n\t<h4>No Movies in this Catageory</h4>\n</ng-template>"
 
 /***/ }),
 
@@ -1164,7 +1117,6 @@ var GenresComponent = (function () {
     GenresComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.route.params.subscribe(function (params) {
-            // const id = params['id'];
             _this.name = params['name'];
             _this.movieServiceService.getMoviesByGenre().subscribe(function (data) {
                 console.log(data);
@@ -1172,7 +1124,6 @@ var GenresComponent = (function () {
                 Object.keys(data).forEach(function (k) {
                     if (k !== "$key") {
                         data[k].$key = k;
-                        // data[k].movieGenre;
                         if (_this.name === data[k].movieGenre) {
                             m.push(data[k]);
                             console.log(m);
@@ -1337,7 +1288,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".poster{\n\tfloat: left;\n\tmargin: 15px;\n\theight: 290px;\n\twidth: 380px;\n\toverflow: hidden;\n}\n.poster img{\n\tmargin: 0 auto;\n\tmax-width: 100%;\n\tbox-shadow: 5px 7px 9px grey;\n\tpadding: 0px;\n}\nli{\n\tlist-style: none;\n}\n.card{\n\n}\n.cast-image img{\n\tmax-width: 100%;\n\tmargin: 0 auto;\n\tmax-height: 100%;\n}\nh2{\n\ttext-align: center;\n}\nh3{\n\ttext-align: center;\n}\n.cast-image{\n\n\theight: 150px;\n\twidth: 150px;\n\tdisplay: -ms-grid;\n\tdisplay: grid;\n\tmargin: 0 auto;\n}\n.remove{\n\tcolor:red;\n}\n.userEmail{\n\tcolor: blue;\n}\n.fa-user{\n\tcolor: grey;\n}\n.noTrailer{\n\tcolor: red;\n\ttext-align: center;\n}\n.video{\n\tmargin-top: 40px;\n}", ""]);
+exports.push([module.i, ".poster{\n\tfloat: left;\n\tmargin: 15px;\n\theight: 305px;\n\twidth: 280px;\n\toverflow: hidden;\n}\n.poster img{\n\tmargin: 0 auto;\n\tmax-width: 80%;\n\tbox-shadow: 5px 7px 9px grey;\n\tpadding: 0px;\n}\nli{\n\tlist-style: none;\n}\n.card{\n\n}\n.cast-image img{\n\tmax-width: 100%;\n\tmargin: 0 auto;\n\tmax-height: 100%;\n}\nh2{\n\ttext-align: center;\n}\nh3{\n\ttext-align: center;\n}\n.cast-image{\n\n\theight: 150px;\n\twidth: 150px;\n\tdisplay: -ms-grid;\n\tdisplay: grid;\n\tmargin: 0 auto;\n}\n.remove{\n\tcolor:red;\n}\n.userEmail{\n\tcolor: blue;\n}\n.fa-user{\n\tcolor: grey;\n}\n.noTrailer{\n\tcolor: red;\n\ttext-align: center;\n}\n.video{\n\tmargin-top: 40px;\n}", ""]);
 
 // exports
 
@@ -1382,12 +1333,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var MovieDetailComponent = (function () {
-    // movie = {
-    //   movieTitle:'',
-    //   movieDescription:'',
-    //   movieImage:'',
-    //   cast:[]
-    // };
     function MovieDetailComponent(movieServiceService, authServiceServioce, router, route, flashMessagesService, sanitizer) {
         var _this = this;
         this.movieServiceService = movieServiceService;
@@ -1402,7 +1347,6 @@ var MovieDetailComponent = (function () {
         this.c = [];
         this.authServiceServioce.getAuth().subscribe(function (auth) {
             _this.Authuser = auth;
-            // this.user=auth.email;
         });
     }
     MovieDetailComponent.prototype.ngOnInit = function () {
@@ -1413,7 +1357,6 @@ var MovieDetailComponent = (function () {
             _this.movie = data;
             _this.cast = data.cast;
             if (typeof data.comments !== typeof undefined) {
-                debugger;
                 _this.refresh();
                 Object.keys(data.comments).forEach(function (key) {
                     var $key = key;
@@ -1427,7 +1370,6 @@ var MovieDetailComponent = (function () {
         });
     };
     MovieDetailComponent.prototype.onSubmitUserComments = function (f) {
-        debugger;
         if (this.Authuser) {
             var comment = ({
                 uid: this.Authuser.uid,
@@ -1444,7 +1386,6 @@ var MovieDetailComponent = (function () {
     };
     MovieDetailComponent.prototype.onDeleteComment = function (com, i) {
         if (confirm('Are you sure?')) {
-            debugger;
             this.movieServiceService.deleteUserComment(this.$key, com.$key);
             this.flashMessagesService.show("You're comment is deleted", { cssClass: 'alert-success', timeout: 1500 });
             this.router.navigate(['/movie-detail/' + this.$key]);
@@ -1493,7 +1434,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/navbar/navbar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-inverse\">\n  <div class=\"container\">\n    <div class=\"navbar-header\">\n      <a class=\"navbar-brand\" href=\"#\">Movie Review App</a>\n    </div>\n    <ul class=\"nav navbar-nav pull-right\">\n      <!-- <li><a href=\"\" routerLink = '/login'><i class=\"fa fa-sign-in\"></i> User Login</a></li> -->\n      \n      <li *ngIf=\"!isLoggedIn\"><a href=\"\" routerLink = '/login'><i class=\"fa fa-sign-in\"></i> Login</a></li>\n      \n      <li *ngIf = 'isLoggedIn ' class=\"dropdown\"><a href=\"\" class=\"dropdown-toggle\" data-toggle='dropdown'>{{isloggedInUser}}<span class=\"caret\"></span></a>\n\n        <ul class=\"dropdown-menu\">\n          \n          <li *ngIf = \"profile.role ==='guest'\"><a href=\"\" routerLink='/user-profile'>Profile</a></li>\n          <li *ngIf = \"profile.role ==='guest'\"><a href=\"\" routerLink='/favourate'>Favourates</a></li>\n          <li *ngIf = \"profile.role ==='guest'\"><a href=\"\" routerLink='/change-password'>Change Password</a></li>\n          <li *ngIf = 'isLoggedIn'><a href=\"#\" (click) = \"onLogout()\"><span class=\"glyphicon glyphicon glyphicon-off\"></span> Logout</a>\n        </ul>\n      </li>\n      <!-- <li *ngIf = 'isLoggedIn'><a href=\"#\" routerLink = \"/user-profile\" ><h4>{{isloggedInUser}}</h4></a></li> -->\n     <li *ngIf = \"profile.role !=='guest'\"><a href=\"\" routerLink='/admin-dashboard'>Dashboard</a></li>\n    </ul>\n  </div>\n</nav>"
+module.exports = "<nav class=\"navbar navbar-inverse\">\n  <div class=\"container\">\n    <div class=\"navbar-header\">\n      <a class=\"navbar-brand\" href=\"#\">Movie Review App</a>\n    </div>\n    <ul class=\"nav navbar-nav pull-right\">\n      <li *ngIf=\"!isLoggedIn\"><a href=\"\" routerLink = '/login'><i class=\"fa fa-sign-in\"></i> Login</a></li>\n      <li *ngIf = 'isLoggedIn ' class=\"dropdown\"><a href=\"\" class=\"dropdown-toggle\" data-toggle='dropdown'>{{isloggedInUser}}<span class=\"caret\"></span></a>\n        <ul class=\"dropdown-menu\">\n          <li *ngIf = \"profile.role ==='guest'\"><a href=\"\" routerLink='/user-profile'>Profile</a></li>\n          <li *ngIf = \"profile.role ==='guest'\"><a href=\"\" routerLink='/favourate'>Favourates</a></li>\n          <li *ngIf = \"profile.role ==='guest'\"><a href=\"\" routerLink='/change-password'>Change Password</a></li>\n          <li *ngIf = 'isLoggedIn'><a href=\"#\" (click) = \"onLogout()\"><span class=\"glyphicon glyphicon glyphicon-off\"></span> Logout</a>\n        </ul>\n      </li>\n      <li *ngIf = \"profile.role !=='guest'\"><a href=\"\" routerLink='/admin-dashboard'>Dashboard</a></li>\n    </ul>\n  </div>\n</nav>"
 
 /***/ }),
 
@@ -1537,7 +1478,6 @@ var NavbarComponent = (function () {
         this.authServiceService.getAuth().subscribe(function (auth) {
             if (auth) {
                 _this.isLoggedIn = true;
-                // this.isloggedInUser = auth.displayName;
                 _this.isloggedInUser = auth.email;
                 _this.movieServiceService.getUserProfile(auth.uid).valueChanges().subscribe(function (data) {
                     console.log(data);
@@ -1547,10 +1487,6 @@ var NavbarComponent = (function () {
             else {
                 _this.isLoggedIn = false;
             }
-            // this.movieServiceService.getUserProfile(auth.uid).valueChanges().subscribe(data=>{debugger
-            //   console.log(data)
-            //    this.profile=data || {} as Profile;
-            // })
         });
     };
     NavbarComponent.prototype.onLogout = function () {
@@ -1667,7 +1603,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "li{\n\tlist-style: none;\n}\nimg{\n\tmax-width: 100%;\n\tmargin: 0 auto;\n\n}\n.image-container{\n\theight: 300px;\n\twidth: 300px;\n\tdisplay: -ms-grid;\n\tdisplay: grid;\n\tmargin: 0 auto;\n\t/*padding: 0px;*/\n}\nh5 {\n\ttext-align: center;\n}\nh4{\n    text-align: center;\n    color: white;\n}\n.panel-body{\n\tpadding: 0px;\n}\n.favourite{\n\tmargin: 10px 10px 0 0;\n\tcolor: darkgrey;\n}\n.active{\n\tcolor: red;\n}\n\n.cataegory {\n    height: 100%;\n    width: 0;\n    position: fixed;\n    z-index: 1;\n    top: 0;\n    left: 0;\n    background-color: #111;\n    overflow-x: hidden;\n    transition: 0.5s;\n    padding-top: 60px;\n}\n\n.cataegory a {\n    padding: 8px 8px 8px 32px;\n    text-decoration: none;\n    font-size: 25px;\n    color: #818181;\n    display: block;\n    transition: 0.3s;\n}\n\n.cataegory a:hover {\n    color: #f1f1f1;\n}\n\n.cataegory .closebtn {\n    position: absolute;\n    top: 0;\n    right: 25px;\n    font-size: 36px;\n    margin-left: 50px;\n}\n.sidebar{\n    font-size:30px;\n    cursor:pointer;\n    \n   /* width: 260px;\n    height: 700px;*/\n    margin-left: -300px;\n}\n\n", ""]);
+exports.push([module.i, "li{\n\tlist-style: none;\n}\nimg{\n\tmax-width: 80%;\n\tmargin: 0 auto;\n    padding: 10px;\n\n}\n.image-container{\n\theight: 300px;\n\twidth: 280px;\n\tdisplay: -ms-grid;\n\tdisplay: grid;\n\tmargin: 0 auto;\n}\nh6{\n    text-align: center;\n}\nh5 {\n\ttext-align: center;\n\n}\nh4{\n    text-align: center;\n    \n}\nh3{\n    text-align: center;\n    color: white;\n}\n.panel-body{\n\tpadding: 0px;\n}\n.favourite{\n\tmargin: 10px 10px 0 0;\n\tcolor: darkgrey;\n}\n.active{\n\tcolor: red;\n}\n\n.cataegory {\n    height: 100%;\n    width: 0;\n    position: fixed;\n    z-index: 1;\n    top: 0;\n    left: 0;\n    background-color: #111;\n    overflow-x: hidden;\n    transition: 0.5s;\n    padding-top: 60px;\n}\n\n.cataegory a {\n    padding: 8px 8px 8px 32px;\n    text-decoration: none;\n    font-size: 25px;\n    color: #818181;\n    display: block;\n    transition: 0.3s;\n}\n\n.cataegory a:hover {\n    color: #f1f1f1;\n}\n\n.cataegory .closebtn {\n    position: absolute;\n    top: 0;\n    right: 25px;\n    font-size: 36px;\n    margin-left: 50px;\n}\n.sidebar{\n    font-size:30px;\n    cursor:pointer;\n    margin-left: -300px;\n}\n\n\n", ""]);
 
 // exports
 
@@ -1680,7 +1616,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/user-dashboard/user-dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"moviesCataegories\" class=\"cataegory\">\n\t<a href=\"javascript:void(0)\" class=\"closebtn\" (click)=\"closeNav()\">&times;</a>\n\t<div>\n\t\t<h4>Movies Category</h4>\n\t\t<a href=\"\" *ngFor='let cat of categories' [routerLink] = \"['/genre/'+cat.name]\"><li><h5>{{cat.name}}</h5></li></a>\n\t</div>\n</div>\n<div class=\"row\">\n\t<div class=\"col-md-3\">\n\t\t<span class=\"sidebar\" (click)=\"openNav()\">&#9776;Movie Categories</span>\n\t</div>\n</div>\n<div class=\"container\">\n\t<div class=\"row\">\n\t\t<div>\n\t\t\t<ul>\n\t\t\t\t<li *ngFor=\"let m of movies let i = index \"  class=\" col-md-4\" [routerLink] =\"['/movie-detail/'+m.$key]\">\n\t\t\t\t\t<div class=\"panel panel-warning\" >\n\t\t\t\t\t\t<div (click) = 'activeIndex=i'>\n\t\t\t\t\t\t\t<span (click)='onAddUserFavourite(i)'><i class=\"glyphicon glyphicon-heart favourite pull-right\" [ngClass]=\"{active:activeIndex === i}\" (click)='favourite = !favourite'  ></i></span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"panel-body\">\n\t\t\t\t\t\t\t<div class=\"container image-container\">\n\t\t\t\t\t\t\t\t<img src=\"{{m.movieImage}}\" >\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div>\n\t\t\t\t\t\t\t\t<span><h5>{{m.movieTitle}}</h5></span>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<!-- <div class=\"panel-footer\">\n\t\t\t\t\t\t\t<a href=\"\" [routerLink] =\"['/movie-detail/'+m.$key]\" >View Details...</a>\n\t\t\t\t\t\t</div> -->\n\t\t\t\t\t</div>\n\t\t\t\t</li>\n\t\t\t</ul>\n\t\t</div>\n\t</div>\n</div>\n"
+module.exports = "<div id=\"moviesCataegories\" class=\"cataegory\">\n\t<a href=\"javascript:void(0)\" class=\"closebtn\" (click)=\"closeNav()\">&times;</a>\n\t<div>\n\t\t<h3>Movies Category</h3>\n\t\t<a href=\"\" *ngFor='let cat of categories' [routerLink] = \"['/genre/'+cat.name]\"><li><h5>{{cat.name}}</h5></li></a>\n\t</div>\n</div>\n<div class=\"row\">\n\t<div class=\"col-md-3\">\n\t\t<span class=\"sidebar\" (click)=\"openNav()\">&#9776;Movie Categories</span>\n\t</div>\n</div>\n<div class=\"container\">\n\t<div class=\"row\">\n\t\t<div>\n\t\t\t<ul>\n\t\t\t\t<li *ngFor=\"let m of movies let i = index \"  class=\" col-md-4\" >\n\t\t\t\t\t<div class=\"panel panel-warning\" >\n\t\t\t\t\t\t<div (click) = 'activeIndex=i'>\n\t\t\t\t\t\t\t<span (click)='onAddUserFavourite(i)'><i class=\"glyphicon glyphicon-heart favourite pull-right\" [ngClass]=\"{active:activeIndex === i}\" (click)='favourite = !favourite'  ></i></span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"panel-body\" [routerLink] =\"['/movie-detail/'+m.$key]\">\n\t\t\t\t\t\t\t<div class=\"container image-container\">\n\t\t\t\t\t\t\t\t<img src=\"{{m.movieImage}}\" >\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div>\n\t\t\t\t\t\t\t\t<span><h4>{{m.movieTitle}}</h4></span>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</li>\n\t\t\t</ul>\n\t\t</div>\n\t</div>\n</div>\n"
 
 /***/ }),
 
@@ -1711,6 +1647,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var UserDashboardComponent = (function () {
     function UserDashboardComponent(router, movieServiceService, authServiceService, flashMessagesService, route) {
+        var _this = this;
         this.router = router;
         this.movieServiceService = movieServiceService;
         this.authServiceService = authServiceService;
@@ -1718,7 +1655,6 @@ var UserDashboardComponent = (function () {
         this.route = route;
         this.movies = [];
         this.favourite = false;
-        // movie:any;
         this.favourites = {};
         this.movie = {
             movieTitle: '',
@@ -1732,12 +1668,14 @@ var UserDashboardComponent = (function () {
                 name: '',
                 image: ''
             }];
+        this.authServiceService.getAuth().subscribe(function (auth) {
+            _this.Authuser = auth;
+        });
     }
     UserDashboardComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.$key = this.route.snapshot.params['id'];
         this.movieServiceService.getCategory().subscribe(function (data) {
-            // this.movies = data;
             console.log(data);
             var i = [];
             Object.keys(data).forEach(function (key) {
@@ -1745,13 +1683,11 @@ var UserDashboardComponent = (function () {
                     data[key].$key = key;
                     i.push(data[key]);
                 }
-                // console.log(key);
             });
             console.log(i);
             _this.categories = i;
         });
         this.movieServiceService.getMovies().subscribe(function (data) {
-            // this.movies = data;
             console.log(data);
             var i = [];
             Object.keys(data).forEach(function (key) {
@@ -1766,21 +1702,14 @@ var UserDashboardComponent = (function () {
         });
     };
     UserDashboardComponent.prototype.onAddUserFavourite = function (i) {
-        var _this = this;
-        // this.favourite(movie){
-        //   favourite.movie = this.movie[i]
-        // };
-        this.authServiceService.getAuth().subscribe(function (auth) {
-            console.log(auth);
-            if (auth === null) {
-                _this.flashMessagesService.show('You Need to Login first for this', { cssClass: 'alert-success', timeout: 3000 });
-                _this.router.navigate(['/login']);
-            }
-            else {
-                // const selectedMovie=this.movies[i];
-                _this.movieServiceService.userFavouriteMovieList(auth.uid, _this.movies[i]);
-            }
-        });
+        console.log(this.Authuser);
+        if (this.Authuser === null) {
+            this.flashMessagesService.show('You Need to Login first for this', { cssClass: 'alert-success', timeout: 3000 });
+            this.router.navigate(['/login']);
+        }
+        else {
+            this.movieServiceService.userFavouriteMovieList(this.Authuser.uid, this.movies[i]);
+        }
     };
     UserDashboardComponent.prototype.openNav = function () {
         document.getElementById("moviesCataegories").style.width = "250px";
@@ -1886,7 +1815,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/user-profile/user-profile.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n\t<div class=\"row\">\n\t\t<div class=\"col-md-6 col-md-offset-3\">\n\t\t\t<div>\n\t\t\t\t<h4>Hello:  {{isLoggedInUser}}</h4>\n\t\t\t</div>\n\t\t\t<div class=\"panel panel-primary\">\n\t\t\t\t<div class=\"panel-body\">\n\t\t\t\t\t<form #f = 'ngForm' (submit) = \"createUserProfile(f)\">\n\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t<label for=\"firstName\" >First Name:</label>\n\t\t\t\t\t\t\t<input type=\"text\"  name=\"firstName\" class=\"form-control\" required placeholder=\"FirstName\" [(ngModel)]='profile.firstName'  minlength=\"3\" #firstName='ngModel'>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div *ngIf='firstName?.errors?.required && firstName?.touched' class=\"alert-danger\">\n\t\t\t\t\t\t\tFirst name Required\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div *ngIf='firstName?.errors?.minlength && firstName?.touched' class=\"alert-danger\">\n\t\t\t\t\t\t\tMust be minimum 3 characters\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t<label for=\"lastName\" >Last Name:</label>\n\t\t\t\t\t\t\t<input type=\"text\"  name=\"lastName\" class=\"form-control\" required placeholder=\"LastName\" [(ngModel)]='profile.lastName'  minlength=\"3\" #lastName='ngModel'>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div *ngIf='lastName?.errors?.required && lastName?.touched' class=\"alert-danger\">\n\t\t\t\t\t\t\tLast name Required\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div *ngIf='lastName?.errors?.minlength && lastName?.touched' class=\"alert-danger\">\n\t\t\t\t\t\t\tMust be minimum 3 characters\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t<label for=\"phone\" >Contact No:</label>\n\t\t\t\t\t\t\t<input type=\"text\"  name=\"phone\" class=\"form-control\" required placeholder=\"Contact Number\" [(ngModel)]='profile.phone'  minlength=\"10\" #phone='ngModel'>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div *ngIf='phone?.errors?.minlength && phone?.touched' class=\"alert-danger\">\n\t\t\t\t\t\t\tPlease enter a valid Phone no.\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\n\t\t\t\t\t\t<button class=\"btn btn-success btn-block\" type=\"submit\" [disabled]=f.invalid>Update </button>\n\t\t\t\t\t</form>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n\n"
+module.exports = "<div >\n\t<a href=\"#\" routerLink = '' class=\"btn btn-link\"><span class=\"glyphicon glyphicon-arrow-left\"></span> Back to Main Page</a>\n</div>\n<div class=\"container\">\n\t<div class=\"row\">\n\t\t<div class=\"col-md-6 col-md-offset-3\">\n\t\t\t<div>\n\t\t\t\t<h4>Hello:  {{isLoggedInUser}}</h4>\n\t\t\t</div>\n\t\t\t<div class=\"panel panel-primary\">\n\t\t\t\t<div class=\"panel-body\">\n\t\t\t\t\t<form #f = 'ngForm' (submit) = \"createUserProfile(f)\">\n\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t<label for=\"firstName\" >First Name:</label>\n\t\t\t\t\t\t\t<input type=\"text\"  name=\"firstName\" class=\"form-control\" required placeholder=\"FirstName\" [(ngModel)]='profile.firstName'  minlength=\"3\" #firstName='ngModel'>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div *ngIf='firstName?.errors?.required && firstName?.touched' class=\"alert-danger\">\n\t\t\t\t\t\t\tFirst name Required\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div *ngIf='firstName?.errors?.minlength && firstName?.touched' class=\"alert-danger\">\n\t\t\t\t\t\t\tMust be minimum 3 characters\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t<label for=\"lastName\" >Last Name:</label>\n\t\t\t\t\t\t\t<input type=\"text\"  name=\"lastName\" class=\"form-control\" required placeholder=\"LastName\" [(ngModel)]='profile.lastName'  minlength=\"3\" #lastName='ngModel'>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div *ngIf='lastName?.errors?.required && lastName?.touched' class=\"alert-danger\">\n\t\t\t\t\t\t\tLast name Required\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div *ngIf='lastName?.errors?.minlength && lastName?.touched' class=\"alert-danger\">\n\t\t\t\t\t\t\tMust be minimum 3 characters\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t<label for=\"phone\" >Contact No:</label>\n\t\t\t\t\t\t\t<input type=\"number\"  name=\"phone\" class=\"form-control\" required placeholder=\"Contact Number\" [(ngModel)]='profile.phone'  minlength=\"10\" #phone='ngModel'>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div *ngIf='phone?.errors?.minlength && phone?.touched' class=\"alert-danger\">\n\t\t\t\t\t\t\tPlease enter a valid Phone no.\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div *ngIf='phone?.errors?.required && phone?.touched' class=\"alert-danger\">\n\t\t\t\t\t\t\tContact Number Required.\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<button class=\"btn btn-success btn-block\" type=\"submit\" [disabled]=f.invalid>Update </button>\n\t\t\t\t\t</form>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n\n"
 
 /***/ }),
 
@@ -1922,24 +1851,12 @@ var UserProfileComponent = (function () {
         this.route = route;
         this.angularFireAuth = angularFireAuth;
         this.profile = {};
-        // profile={
-        //   firstName:'',
-        //   lastName:'',
-        //   phone:''
-        // }
         this.user = [];
         this.disableRole = false;
     }
     UserProfileComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.authServiceService.getAuth().subscribe(function (auth) {
-            // if(auth){
-            //   this.isLoggedIn = true;
-            //   // this.isloggedInUser = auth.displayName;
-            //   this.isLoggedInUser = auth.email;
-            // }else{
-            //   this.isLoggedIn = false;
-            // }
             _this.movieServiceService.getUserProfile(auth.uid).valueChanges().subscribe(function (data) {
                 _this.profile = data || {};
             });
@@ -2096,12 +2013,8 @@ var AuthServiceService = (function () {
     AuthServiceService.prototype.newUser = function (email, password) {
         var _this = this;
         return new Promise(function (resolve, reject) {
-            debugger;
             _this.angularFireAuth.auth.createUserWithEmailAndPassword(email, password)
                 .then(function (userData) { return resolve(userData); }, function (err) { return reject(err); });
-            // const profile={} as Profile;
-            // profile.role='guest';
-            // this.guest=true
         });
     };
     return AuthServiceService;
@@ -2171,7 +2084,6 @@ var MovieServiceService = (function () {
         return this.angularFire.object("/movies/" + $key);
     };
     MovieServiceService.prototype.updateMovie = function ($key, movie) {
-        debugger;
         return this.movies.update($key, movie);
     };
     MovieServiceService.prototype.addCategory = function (category) {
@@ -2192,11 +2104,6 @@ var MovieServiceService = (function () {
         });
     };
     MovieServiceService.prototype.newUserProfile = function (profile, uid) {
-        debugger;
-        // const afList = this.angularFire.list('user');
-        // afList.push({ profile });
-        // const listObservable = afList.snapshotChanges();
-        // listObservable.subscribe();
         var p = this.angularFire.object("/user/" + uid + "/profile");
         p.set(profile);
         console.log(profile);
@@ -2204,11 +2111,6 @@ var MovieServiceService = (function () {
         this.router.navigate(['']);
     };
     MovieServiceService.prototype.getUserProfile = function ($key) {
-        // return this.angularFire.object('/profile').snapshotChanges().map(action => {
-        //  		 const $key = action.payload.key;
-        //   	const data = { $key, ...action.payload.val() };
-        //   	return data;
-        // 		});
         return this.angularFire.object("/user/" + $key + "/profile");
     };
     MovieServiceService.prototype.userFavouriteMovieList = function (id, i) {
@@ -2234,12 +2136,10 @@ var MovieServiceService = (function () {
         console.log(i);
         console.log($key);
         return this.angularFire.list("/movies/" + $key + "/comments/" + i).remove();
-        // this.route.navigate(['/movie-detail'+ $key])
     };
     MovieServiceService.prototype.getUsers = function () {
         return this.angularFire.object("/user")
             .snapshotChanges().map(function (action) {
-            debugger;
             var $key = action.payload.key;
             var data = __assign({ $key: $key }, action.payload.val());
             return data;

@@ -17,10 +17,6 @@ export class LoginComponent implements OnInit {
 	id:string;
 	email:string;
 	password:string;
-	// profile={
-	// 	displayName:'',
-	// 	email:''
-	// }
 isloggedInUser:string;
 isLoggedInUserEmail:string;
 isLoggedIn:boolean;

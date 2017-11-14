@@ -13,7 +13,7 @@ export class CategoriesComponent implements OnInit {
 movies:any[];
 category = {
 	name:'',
-	// id:''
+	
 }
   constructor(
   	public movieServiceService:MovieServiceService,

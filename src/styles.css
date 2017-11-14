@@ -6,6 +6,9 @@
 app-categories{
 	background-color:#D2691E;
 }
+*:focus {
+    outline: 0;
+}
 
 
 

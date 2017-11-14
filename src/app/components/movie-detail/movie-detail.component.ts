@@ -27,12 +27,6 @@ export class MovieDetailComponent implements OnInit {
  user:string;
  video:object;
  
-  // movie = {
-  //   movieTitle:'',
-  //   movieDescription:'',
-  //   movieImage:'',
-  //   cast:[]
-  // };
   constructor(
   	public movieServiceService:MovieServiceService,
     public authServiceServioce:AuthServiceService,
@@ -43,39 +37,29 @@ export class MovieDetailComponent implements OnInit {
   	) { 
     this.authServiceServioce.getAuth().subscribe(auth=>{
       this.Authuser=auth;
-      // this.user=auth.email;
-     
     })
   }
 
   ngOnInit() {
   	this.$key = this.route.snapshot.params['id'];
-  	  this.movieServiceService.getMovie(this.$key).valueChanges().subscribe((data:any)=>{
-      
-      console.log(data);
-
-       this.movie = data;
-       this.cast =data.cast;
-
-       
-       if(typeof data.comments !== typeof undefined){debugger
-          this.refresh()
-       Object.keys(data.comments).forEach(key=>{
+  	this.movieServiceService.getMovie(this.$key).valueChanges().subscribe((data:any)=>{
+    console.log(data);
+    this.movie = data;
+    this.cast =data.cast;
+    if(typeof data.comments !== typeof undefined){
+      this.refresh()
+      Object.keys(data.comments).forEach(key=>{
        const $key=key
        const uid=data.comments[key].uid
        const cmt=data.comments[key].comment
        const email_id=data.comments[key].email
-       this.c.push({id:uid,comment:cmt,email:email_id,$key})
-       console.log(this.c)
-
+        this.c.push({id:uid,comment:cmt,email:email_id,$key})
+        console.log(this.c)
       });
-   
-     }
-    });
-  }
-  
-  onSubmitUserComments(f:NgForm){debugger
-    
+    }
+  });
+}
+  onSubmitUserComments(f:NgForm){
     if( this.Authuser){
       const comment = ({
         uid: this.Authuser.uid,
@@ -84,7 +68,6 @@ export class MovieDetailComponent implements OnInit {
       })
       console.log(comment)
       this.movieServiceService.userComment(this.Authuser.uid,this.$key,comment)
-      
     }
     else{
       this.flashMessagesService.show('You need to Login first for this',{cssClass:'alert-success', timeout:3000});
@@ -92,20 +75,16 @@ export class MovieDetailComponent implements OnInit {
     }
   }
   onDeleteComment(com,i){
-    if(confirm('Are you sure?')){debugger
+    if(confirm('Are you sure?')){
       this.movieServiceService.deleteUserComment(this.$key,com.$key);
       this.flashMessagesService.show("You're comment is deleted",{cssClass:'alert-success',timeout:1500}) ;
       this.router.navigate(['/movie-detail/'+ this.$key]);
       this.refresh();
-
     }
   } 
   refresh(){
-     this.movieServiceService.getMovie(this.$key)
-      
-      console.log(this.c);
-  this.c =[];
-
-
+    this.movieServiceService.getMovie(this.$key)
+    console.log(this.c);
+    this.c =[];
   }
 }

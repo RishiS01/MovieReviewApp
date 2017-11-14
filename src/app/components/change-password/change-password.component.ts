@@ -34,15 +34,15 @@ export class ChangePasswordComponent implements OnInit {
   ngOnInit() {
 
   }
-  onChangeUserPassword(f:NgForm){debugger
+  onChangeUserPassword(f:NgForm){
   let newPassword=f.value.newPassword;
     let user = firebase.auth().currentUser;
 
    firebase.auth().currentUser.reauthenticateWithCredential(firebase.auth.EmailAuthProvider.credential(firebase.auth().currentUser.email,f.value.password))
-    .then((res)=>{debugger
+    .then((res)=>{
       console.log(f.value.password,firebase.auth().currentUser.email)
 
-    user.updatePassword(newPassword).then((res)=> {debugger
+    user.updatePassword(newPassword).then((res)=> {
      
       console.log(newPassword);
     this.flashMessagesService.show('Password Updated',{cssClass:'alert-success',timeout:1500});

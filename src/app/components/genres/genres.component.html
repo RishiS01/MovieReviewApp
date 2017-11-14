@@ -5,19 +5,16 @@
 	<h3>{{name}}</h3>
 	<div class="row" *ngIf='movie?.length>0;else noMovie'>
 		<ul>
-			<li *ngFor="let mov of movie; let i = index; " class="col-md-4">
+			<li *ngFor="let mov of movie; let i = index; " class="col-md-4" >
 				<div class="panel panel-default">
 					<!-- <div class="panel-heading">{{m.movieTitle}}</div> -->
-					<div class="panel-body">
+					<div class="panel-body" [routerLink] ="['/movie-detail/'+mov.$key]">
 						<div class="container image-container">
 							<img src="{{mov.movieImage}}" >
 						</div>
 						<div>
-							<span><h5>{{mov.movieTitle}}</h5></span>
+							<span><h3>{{mov.movieTitle}}</h3></span>
 						</div>
-					</div>
-					<div class="panel-footer">
-						<a href="" [routerLink] ="['/movie-detail/'+mov.$key]" >View Details...</a>
 					</div>
 				</div>
 			</li>

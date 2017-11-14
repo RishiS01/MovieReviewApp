@@ -35,7 +35,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\n.dz-preview{\n\tdisplay:none !important;\n}\n\napp-categories{\n\tbackground-color:#D2691E;\n}\n\n\n\n", ""]);
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\n.dz-preview{\n\tdisplay:none !important;\n}\n\napp-categories{\n\tbackground-color:#D2691E;\n}\n*:focus {\n    outline: 0;\n}\n\n\n\n", ""]);
 
 // exports
 

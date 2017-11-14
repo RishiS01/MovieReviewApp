@@ -43,7 +43,7 @@ export class AdminDashboardComponent implements OnInit {
       data[key].$key = key;
         i.push(data[key]) 
         }   
-         // console.log(key);
+        
       });
         console.log(i)  
       this.categories= i;
@@ -51,7 +51,7 @@ export class AdminDashboardComponent implements OnInit {
 
   	this.id = this.route.snapshot.params['id'];
   	this.movieServiceService.getMovies().subscribe(data=>{
-  		// this.movies = data;
+  	
   		console.log(data);
         let x = []
   		Object.keys(data).forEach( key => {
@@ -65,7 +65,7 @@ export class AdminDashboardComponent implements OnInit {
   		this.movies = x;
   	})
   }
-  onDeleteMovie(m){debugger
+  onDeleteMovie(m){
   	if(confirm('Are you sure?')){
   	this.movieServiceService.deleteMovie(m);
   	this.flashMessagesService.show('Movie deleted',{cssClass:'alert-success',timeout:1000});

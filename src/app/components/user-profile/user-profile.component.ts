@@ -6,6 +6,7 @@ import * as firebase from 'firebase/app';
 import { NgForm } from '@angular/forms';
 import { AngularFireAuth,AUTH_PROVIDERS} from 'angularfire2/auth';
 import { Profile } from '../../Models/Profile';
+import { User } from 'firebase/app';
 
 
 
@@ -18,63 +19,43 @@ export class UserProfileComponent implements OnInit {
 	$key:string;
 	profile ={} as Profile;
   id:string;
-  // profile={
-  //   firstName:'',
-  //   lastName:'',
-  //   phone:''
-  // }
   user:any=[];
-isloggedInUser:string;
-isLoggedInUser:string;
-isLoggedIn:boolean;
-disableRole:boolean=false;
+  isloggedInUser:string;
+  isLoggedInUser:string;
+  isLoggedIn:boolean;
+  disableRole:boolean=false;
+  Authuser:User;
   constructor(
   	public authServiceService:AuthServiceService,
   	public movieServiceService:MovieServiceService,
   	public router:Router,
   	public route:ActivatedRoute,
     public angularFireAuth:AngularFireAuth,
-  	) { }
+  	) {
+     
+     }
 
   ngOnInit() {
-    
-     
-this.authServiceService.getAuth().subscribe(auth =>{
-      // if(auth){
-      //   this.isLoggedIn = true;
-      //   // this.isloggedInUser = auth.displayName;
-      //   this.isLoggedInUser = auth.email;
+     this.authServiceService.getAuth().subscribe(auth =>{
+        
       
-      // }else{
-      //   this.isLoggedIn = false;
-      // }
-      
-this.movieServiceService.getUserProfile(auth.uid).valueChanges().subscribe(data=>{
- 
-      
-     this.profile=data || {} as Profile;
-
-});
-     });
- }
- createUserProfile(f:NgForm){debugger
-   let guest
-   const profile={} as Profile;
-   profile.firstName=f.value.firstName;
-   profile.lastName=f.value.lastName;
-   profile.phone=f.value.phone;
-   profile.role='guest';
+    this.movieServiceService.getUserProfile(auth.uid).valueChanges().subscribe(data=>{
+      this.profile=data || {} as Profile;
+    });
+    })
+  }
+  createUserProfile(f:NgForm){debugger
+    let guest
+    const profile={} as Profile;
+    profile.firstName=f.value.firstName;
+    profile.lastName=f.value.lastName;
+    profile.phone=f.value.phone;
+    profile.role='guest';
    
    console.log(f.value);
    this.authServiceService.getAuth().subscribe(auth=>{
-     this.movieServiceService.newUserProfile(profile,auth.uid)
-   });
+   this.movieServiceService.newUserProfile(profile,auth.uid)
+   })
    
- }
-  
-
-
-     
-   
-
+  }
 }

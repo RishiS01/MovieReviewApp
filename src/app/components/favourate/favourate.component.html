@@ -5,21 +5,17 @@
 	<div class="row" *ngIf='movie?.length >0; else noMovie'>
 		<div>
 			<ul>
-				<li *ngFor='let mov of movie' class="col-md-4 col-xs-12">
+				<li *ngFor='let mov of movie' class="col-md-4 col-xs-12" >
 					<div class="panel panel-primary">
 						
 						<div class="panel-body">
 							<div><a  data-toggle="tooltip" data-placement="top" title="Remove as Favourite" class="glyphicon glyphicon-remove pull-right delete" (click)= "onRemoveFavourate(mov)"></a></div>
-							<div class="container image-container">
+							<div class="container image-container" [routerLink] ="['/movie-detail/'+mov.$key]">
 								<img  src="{{mov.movieImage}}" >
 							</div>
 							<div>
-								<span><h5>{{mov.movieTitle}}</h5></span>
+								<span><h4>{{mov.movieTitle}}</h4></span>
 							</div>
-						</div>
-						<div class="panel-footer">
-							<!-- <a href="" [routerLink] ="['/edit-movie/'+m.$key]" ><i class="glyphicon glyphicon-pencil"></i> Edit Movie</a> 	 -->
-							<a href="" [routerLink] ="['/movie-detail/'+mov.$key]" >View Details...</a>
 						</div>
 					</div>
 				</li>
@@ -28,5 +24,5 @@
 	</div>
 </div>
 <ng-template #noMovie>
-	<h4>No favourites to show</h4>
+	<h3>No favourites to show</h3>
 </ng-template>

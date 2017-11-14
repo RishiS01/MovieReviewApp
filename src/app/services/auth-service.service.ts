@@ -65,14 +65,11 @@ export class AuthServiceService {
   }
          // Register a new User
   newUser(email:string,password:string){
-    return new Promise((resolve,reject)=>{debugger
+    return new Promise((resolve,reject)=>{
       this.angularFireAuth.auth.createUserWithEmailAndPassword(email,password)
 
       .then(userData=>resolve(userData),
       err=>reject(err))  
-      // const profile={} as Profile;
-      // profile.role='guest';
-      // this.guest=true
 
     });
     

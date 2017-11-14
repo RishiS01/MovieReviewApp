@@ -1,7 +1,7 @@
 <div id="moviesCataegories" class="cataegory">
 	<a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
 	<div>
-		<h4>Movies Category</h4>
+		<h3>Movies Category</h3>
 		<a href="" *ngFor='let cat of categories' [routerLink] = "['/genre/'+cat.name]"><li><h5>{{cat.name}}</h5></li></a>
 	</div>
 </div>
@@ -14,22 +14,19 @@
 	<div class="row">
 		<div>
 			<ul>
-				<li *ngFor="let m of movies let i = index "  class=" col-md-4" [routerLink] ="['/movie-detail/'+m.$key]">
+				<li *ngFor="let m of movies let i = index "  class=" col-md-4" >
 					<div class="panel panel-warning" >
 						<div (click) = 'activeIndex=i'>
 							<span (click)='onAddUserFavourite(i)'><i class="glyphicon glyphicon-heart favourite pull-right" [ngClass]="{active:activeIndex === i}" (click)='favourite = !favourite'  ></i></span>
 						</div>
-						<div class="panel-body">
+						<div class="panel-body" [routerLink] ="['/movie-detail/'+m.$key]">
 							<div class="container image-container">
 								<img src="{{m.movieImage}}" >
 							</div>
 							<div>
-								<span><h5>{{m.movieTitle}}</h5></span>
+								<span><h4>{{m.movieTitle}}</h4></span>
 							</div>
 						</div>
-						<!-- <div class="panel-footer">
-							<a href="" [routerLink] ="['/movie-detail/'+m.$key]" >View Details...</a>
-						</div> -->
 					</div>
 				</li>
 			</ul>

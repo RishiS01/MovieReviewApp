@@ -47,7 +47,7 @@ export class MovieServiceService {
 	getMovie($key){
 		return this.angularFire.object(`/movies/${$key}`)
 	}
-	updateMovie($key,movie){debugger
+	updateMovie($key,movie){
 		
 		return this.movies.update($key,movie)
 	}
@@ -68,27 +68,16 @@ export class MovieServiceService {
     	const data = { $key, ...action.payload.val() };
     	return data;
   		});
-
 	}
 
-	newUserProfile(profile,uid){debugger
-  		// const afList = this.angularFire.list('user');
-  		// afList.push({ profile });
-  		// const listObservable = afList.snapshotChanges();
-  		// listObservable.subscribe();
-  		 const p = this.angularFire.object(`/user/${uid}/profile`);
-
-  		 p.set(profile);
-  		 console.log(profile);
-  		 console.log(uid);
-  		 this.router.navigate(['']);
+	newUserProfile(profile,uid){
+  		const p = this.angularFire.object(`/user/${uid}/profile`);
+		p.set(profile);
+  		console.log(profile);
+  		console.log(uid);
+  		this.router.navigate(['']);
 	}
 	getUserProfile($key){
-		// return this.angularFire.object('/profile').snapshotChanges().map(action => {
-  //  		 const $key = action.payload.key;
-  //   	const data = { $key, ...action.payload.val() };
-  //   	return data;
-  // 		});
   		return this.angularFire.object(`/user/${$key}/profile`);
 	}
 	userFavouriteMovieList(id,i){
@@ -96,7 +85,6 @@ export class MovieServiceService {
 		delete i.$key;
 		list.set({...i})
 		console.log(i);
-		
 	}
 	getUserFavourite($key){
 		console.log($key)
@@ -117,12 +105,12 @@ export class MovieServiceService {
 		console.log(i)
 		console.log($key)
 		return this.angularFire.list(`/movies/${$key}/comments/${i}`).remove();
-		// this.route.navigate(['/movie-detail'+ $key])
+		
 	}
 	
 	getUsers(){
 		return this.angularFire.object(`/user`)
-		.snapshotChanges().map(action => {debugger
+		.snapshotChanges().map(action => {
    		 const $key = action.payload.key;
     	const data = { $key, ...action.payload.val() };
     	return data;

@@ -1,7 +1,7 @@
 export interface Profile{
 	firstName?:string;
 	lastName?:string;
-	phone?:string;
+	phone?:number;
 	$key?:string;
 	role?:string;
 

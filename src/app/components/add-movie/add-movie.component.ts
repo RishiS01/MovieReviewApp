@@ -72,33 +72,7 @@ loader:boolean = false;
   	this.flashMessagesService.show('Movie added',{cssClass:'alert-success',timeout:1500});
   	this.router.navigate(['/admin-dashboard']);
   }
-//   YouTubeGetID(url){debugger
-//   let ID = '';
-//   url = url.replace(/(>|<)/gi,'').split(/(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/)/);
-//   if(url[2] !== undefined) {
-//     ID = url[2].split(/[^0-9a-z_\-]/i);
-//     ID = ID[0];
-//   }
-//   else {
-//     ID = url;
-//   }
-//      return ID;
-//    // this.getEmbededUrl(ID)
-// }
-//   onAddVideoSource(abc){debugger
-   
-//    this.video=abc
-//    this.YouTubeGetID(abc)
 
-//   }
-  // getEmbededUrl(a){
-  //   if(!_.isEmpty(a)){
-  //     console.log(a);
-  //     return this.satitizer.bypassSecurityTrustResourceUrl( a);  
-  //   }else{
-  //     return false;
-  //   }
-  // }
   onAddCast(){
   	this.cast.push({
   	 id: new Date().valueOf(),
@@ -138,10 +112,10 @@ loader:boolean = false;
   onUploadCastImage($event,i){
   	console.log($event)
   	this.cast[i].image = $event[0].dataURL;
-    // this.loader=false;
+    this.loader=false;
     console.log(this.cast[i].image);
   }
-  onUploadProgress($event){debugger
+  onUploadProgress($event){
     this.loader=true;
 
   }

@@ -33,18 +33,14 @@ export class GenresComponent implements OnInit {
   	private route:ActivatedRoute) { }
 
   ngOnInit() {
-  	
-  	this.route.params.subscribe( params=>{
-  		// const id = params['id'];
-  		this.name=params['name'];
-  		this.movieServiceService.getMoviesByGenre().subscribe(data=>{
+    this.route.params.subscribe( params=>{
+  	this.name=params['name'];
+  	this.movieServiceService.getMoviesByGenre().subscribe(data=>{
      	console.log(data);
      	let m =[]
      	Object.keys(data).forEach( k => {
   			if(k !== "$key"){
   				data[k].$key = k;
-  			
-			 // data[k].movieGenre;
   			if(this.name === data[k].movieGenre){
   				m.push(data[k]) 
   				console.log(m)
@@ -53,7 +49,7 @@ export class GenresComponent implements OnInit {
   			}
   			}   
 			});
-      	});
+      });
     })
 
  }

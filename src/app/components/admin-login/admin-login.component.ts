@@ -22,7 +22,7 @@ export class AdminLoginComponent implements OnInit {
   	) {
 
    this.authServiceService.getAuth().subscribe(auth=>{
-      // let aid=auth.uid ;Tu3hdIqMYqei8MOUmoNAcyaTfMT2
+      
     });
   }
 

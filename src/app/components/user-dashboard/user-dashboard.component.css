@@ -2,21 +2,29 @@ li{
 	list-style: none;
 }
 img{
-	max-width: 100%;
+	max-width: 80%;
 	margin: 0 auto;
+    padding: 10px;
 
 }
 .image-container{
 	height: 300px;
-	width: 300px;
+	width: 280px;
 	display: grid;
 	margin: 0 auto;
-	/*padding: 0px;*/
+}
+h6{
+    text-align: center;
 }
 h5 {
 	text-align: center;
+
 }
 h4{
+    text-align: center;
+    
+}
+h3{
     text-align: center;
     color: white;
 }
@@ -67,9 +75,7 @@ h4{
 .sidebar{
     font-size:30px;
     cursor:pointer;
-    
-   /* width: 260px;
-    height: 700px;*/
     margin-left: -300px;
 }
+
 
